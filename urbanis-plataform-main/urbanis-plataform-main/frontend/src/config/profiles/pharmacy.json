@@ -1,0 +1,11 @@
+{
+  "profile": "pharmacy",
+  "displayName": "Drogaria / Farmácia",
+  "weights": {
+    "infra": { "dens": 0.70, "mob": 0.30 },
+    "market": { "central": 0.30, "pop": 0.40, "idade": 0.30 },
+    "risk": { "crime": 0.50, "socio": 0.50 },
+    "balance": { "infra": 0.60, "market": 0.40 },
+    "alpha": 0.10
+  }
+}

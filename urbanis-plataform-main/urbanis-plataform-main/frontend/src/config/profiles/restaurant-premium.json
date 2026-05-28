@@ -1,0 +1,11 @@
+{
+  "profile": "restaurant-premium",
+  "displayName": "Restaurante Premium",
+  "weights": {
+    "infra": { "dens": 0.50, "mob": 0.50 },
+    "market": { "central": 0.60, "pop": 0.20, "idade": 0.20 },
+    "risk": { "crime": 0.50, "socio": 0.50 },
+    "balance": { "infra": 0.30, "market": 0.70 },
+    "alpha": 0.30
+  }
+}

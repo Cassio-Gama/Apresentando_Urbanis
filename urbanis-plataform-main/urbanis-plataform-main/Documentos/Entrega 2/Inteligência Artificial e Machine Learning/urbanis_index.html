@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanis AI | Localizador Inteligente de Negócios em SP</title>
+    <meta name="description" content="Encontre o melhor bairro de São Paulo para abrir seu negócio com o algoritmo de IA da Urbanis.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+/* ============================
+   URBANIS AI — Premium Design System
+   ============================ */
+
+:root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #111827;
+    --bg-card: rgba(17, 24, 39, 0.75);
+    --bg-card-hover: rgba(30, 41, 59, 0.85);
+
+    --accent-cyan: #06d6a0;
+    --accent-blue: #4cc9f0;
+    --accent-purple: #7b2ff7;
+    --accent-gold: #f9c74f;
+
+    --gradient-primary: linear-gradient(135deg, #06d6a0 0%, #4cc9f0 100%);
+    --gradient-hero: linear-gradient(135deg, #06d6a0 0%, #4cc9f0 50%, #7b2ff7 100%);
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-accent: rgba(6, 214, 160, 0.3);
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.3);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 40px rgba(6, 214, 160, 0.15);
+
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hidden { display: none !important; }
+
+.bg-grid {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+}
+.bg-glow-1 {
+    width: 600px; height: 600px;
+    top: -200px; right: -150px;
+    background: var(--accent-purple);
+    animation: floatGlow 12s ease-in-out infinite;
+}
+.bg-glow-2 {
+    width: 500px; height: 500px;
+    bottom: -200px; left: -150px;
+    background: var(--accent-cyan);
+    animation: floatGlow 15s ease-in-out infinite reverse;
+}
+
+@keyframes floatGlow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+#navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#navbar.scrolled {
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.6rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
+}
+
+.brand-icon .material-icons-round { font-size: 20px; }
+
+.brand-accent {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links { display: flex; gap: 2rem; }
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover { color: var(--accent-cyan); }
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s;
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    position: relative;
+}
+
+.hero-content { max-width: 800px; }
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(6, 214, 160, 0.1);
+    border: 1px solid rgba(6, 214, 160, 0.2);
+    border-radius: 50px;
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.6s ease;
+}
+
+.hero-badge .material-icons-round { font-size: 18px; }
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.7s ease 0.1s backwards;
+}
+
+.gradient-text {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.7s ease 0.2s backwards;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.7s ease 0.3s backwards;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    animation: fadeInUp 0.7s ease 0.4s backwards;
+}
+
+.hero-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.hero-stat-number {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+.hero-stat-divider { width: 1px; height: 40px; background: var(--border-subtle); }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+}
+
+.btn .material-icons-round { font-size: 20px; }
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 4px 15px rgba(6, 214, 160, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(6, 214, 160, 0.4);
+}
+
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-lg { padding: 1rem 2rem; font-size: 1rem; }
+
+.btn-block { width: 100%; justify-content: center; padding: 1rem; font-size: 1.05rem; }
+
+.section { padding: 6rem 0; position: relative; }
+
+.section-dark {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section-header.visible { opacity: 1; transform: translateY(0); }
+
+.section-tag {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(6, 214, 160, 0.1);
+    border: 1px solid rgba(6, 214, 160, 0.2);
+    border-radius: 50px;
+    color: var(--accent-cyan);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.glass-card.visible { opacity: 1; transform: translateY(0); }
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.step-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: var(--delay);
+}
+
+.step-card.visible { opacity: 1; transform: translateY(0); }
+
+.step-card:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.step-number {
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+}
+
+.step-icon {
+    width: 50px; height: 50px;
+    border-radius: var(--radius-md);
+    background: rgba(6, 214, 160, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--accent-cyan);
+}
+
+.step-icon .material-icons-round { font-size: 26px; }
+
+.step-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+.step-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+
+.search-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.search-panel .panel-header,
+.results-content .panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-header .material-icons-round { color: var(--accent-cyan); font-size: 24px; }
+.panel-header h3 { font-size: 1.15rem; font-weight: 700; }
+
+.criteria-group { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
+
+.input-group {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.input-group:hover { border-color: var(--border-accent); background: rgba(6, 214, 160, 0.02); }
+
+.input-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem; }
+
+.input-icon {
+    width: 34px; height: 34px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.input-icon .material-icons-round { font-size: 18px; }
+
+.input-icon.income { background: rgba(76, 201, 240, 0.12); color: var(--accent-blue); }
+.input-icon.safety { background: rgba(6, 214, 160, 0.12); color: var(--accent-cyan); }
+.input-icon.rent { background: rgba(249, 199, 79, 0.12); color: var(--accent-gold); }
+.input-icon.density { background: rgba(123, 47, 247, 0.12); color: var(--accent-purple); }
+
+.input-header label { flex: 1; font-weight: 600; font-size: 0.95rem; color: var(--text-primary); }
+
+.value-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 28px;
+    padding: 0 0.5rem;
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: transform 0.2s;
+}
+
+.value-badge.pulse { transform: scale(1.15); }
+
+.input-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    margin-left: calc(34px + 0.75rem);
+}
+
+.slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 10px rgba(6, 214, 160, 0.4);
+}
+
+.slider-income::-webkit-slider-thumb { background: var(--accent-blue); }
+.slider-safety::-webkit-slider-thumb { background: var(--accent-cyan); }
+.slider-rent::-webkit-slider-thumb { background: var(--accent-gold); }
+.slider-density::-webkit-slider-thumb { background: var(--accent-purple); }
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.results-panel { min-height: 400px; }
+
+.results-placeholder {
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-card);
+    border: 2px dashed rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+}
+
+.results-placeholder .material-icons-round { font-size: 56px; margin-bottom: 1rem; opacity: 0.3; }
+.results-placeholder h3 { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.results-placeholder p { font-size: 0.9rem; max-width: 280px; }
+
+.results-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.result-card {
+    position: relative;
+    padding: 1.25rem 1.5rem !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeInUp 0.5s ease backwards;
+    opacity: 1 !important;
+    transform: none !important;
+    border-left: 3px solid var(--text-muted);
+    cursor: default;
+}
+
+.result-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+
+.result-card.gold { border-left-color: #f9c74f; }
+.result-card.silver { border-left-color: #b0bec5; }
+.result-card.bronze { border-left-color: #cd7f32; }
+
+.result-rank-badge {
+    width: 40px; height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    font-size: 1.25rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.04);
+    flex-shrink: 0;
+}
+
+.rank-1 { background: rgba(249, 199, 79, 0.15); color: #f9c74f; }
+.rank-2 { background: rgba(176, 190, 197, 0.15); color: #b0bec5; }
+.rank-3 { background: rgba(205, 127, 50, 0.15); color: #cd7f32; }
+
+.result-main { flex: 1; min-width: 140px; }
+.result-main h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+
+.result-score { display: flex; align-items: center; gap: 0.75rem; }
+
+.score-bar-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.score-bar-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+    width: 0;
+    animation: fillBar 0.8s ease forwards;
+}
+
+@keyframes fillBar {
+    to { width: var(--target-width, 100%); }
+}
+
+.score-value {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--accent-cyan);
+    min-width: 42px;
+    text-align: right;
+}
+
+.result-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.detail-item { display: flex; align-items: center; gap: 0.4rem; }
+.detail-item .material-icons-round { font-size: 16px; color: var(--text-muted); }
+.detail-item small { display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.detail-item strong { font-size: 0.85rem; font-weight: 600; }
+
+.data-table-card { overflow: hidden; }
+.table-wrapper { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; }
+
+thead th {
+    text-align: left;
+    padding: 1rem 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+tbody td {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+tbody tr { transition: background 0.2s; }
+tbody tr:hover { background: rgba(6, 214, 160, 0.04); }
+tbody tr:last-child td { border-bottom: none; }
+
+.tag { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.78rem; font-weight: 600; }
+.tag-green { background: rgba(6, 214, 160, 0.12); color: #06d6a0; }
+.tag-yellow { background: rgba(249, 199, 79, 0.12); color: #f9c74f; }
+.tag-red { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
+
+.mini-bar-track {
+    width: 80px; height: 5px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px; overflow: hidden;
+    display: inline-block; vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.mini-bar-fill { height: 100%; background: var(--gradient-primary); border-radius: 3px; }
+
+footer { padding: 3rem 0; border-top: 1px solid var(--border-subtle); text-align: center; }
+.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+.footer-brand { display: flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.1rem; letter-spacing: 1px; }
+.footer-brand .material-icons-round { color: var(--accent-cyan); }
+footer p { color: var(--text-secondary); font-size: 0.85rem; }
+.footer-copy { color: var(--text-muted); font-size: 0.78rem !important; }
+
+.loading-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 48px; height: 48px;
+    border: 3px solid rgba(6, 214, 160, 0.15);
+    border-top-color: var(--accent-cyan);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loading-overlay p { color: var(--text-secondary); font-weight: 500; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.spin { animation: spin 1s linear infinite; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { padding-top: 5rem; }
+    .hero-stats { flex-direction: column; gap: 1rem; }
+    .hero-stat-divider { width: 40px; height: 1px; }
+    .search-layout { grid-template-columns: 1fr; }
+    .result-details { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid { grid-template-columns: 1fr; }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <span class="brand-icon">
+                    <span class="material-icons-round">location_city</span>
+                </span>
+                URBANIS<span class="brand-accent">AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="#hero">Início</a>
+                <a href="#how-it-works">Como Funciona</a>
+                <a href="#search-section">Analisar</a>
+                <a href="#ml-section">Clusters (ML)</a>
+                <a href="#stats-section">Dados</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="material-icons-round">auto_awesome</span>
+                Powered by Heuristic AI
+            </div>
+            <h1>Encontre o <span class="gradient-text">Local Perfeito</span> para seu Negócio em São Paulo</h1>
+            <p class="hero-subtitle">Nossa inteligência artificial analisa dados de renda, segurança, custo e infraestrutura comercial para recomendar os melhores bairros para o seu empreendimento.</p>
+            <div class="hero-actions">
+                <a href="#search-section" class="btn btn-primary btn-lg">
+                    <span class="material-icons-round">search</span>
+                    Iniciar Análise
+                </a>
+                <a href="#how-it-works" class="btn btn-ghost btn-lg">
+                    <span class="material-icons-round">play_circle</span>
+                    Como Funciona
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">15</span>
+                    <span class="hero-stat-label">Bairros Mapeados</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">4</span>
+                    <span class="hero-stat-label">Critérios de IA</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">Top 5</span>
+                    <span class="hero-stat-label">Recomendações</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Algoritmo</span>
+                <h2>Como a IA Funciona</h2>
+                <p>Nosso algoritmo de busca heurística pondera múltiplos fatores para ranquear os bairros.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" style="--delay: 0s">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><span class="material-icons-round">tune</span></div>
+                    <h3>Defina Prioridades</h3>
+                    <p>Ajuste os pesos dos critérios conforme o que é mais importante para o seu negócio.</p>
+                </div>
+                <div class="step-card" style="--delay: 0.1s">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><span class="material-icons-round">calculate</span></div>
+                    <h3>Cálculo Heurístico</h3>
+                    <p>A IA normaliza os dados e calcula um score ponderado para cada bairro da base.</p>
+                </div>
+                <div class="step-card" style="--delay: 0.2s">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><span class="material-icons-round">sort</span></div>
+                    <h3>Ranqueamento</h3>
+                    <p>Os bairros são ordenados pelo score e os 5 melhores são apresentados a você.</p>
+                </div>
+                <div class="step-card" style="--delay: 0.3s">
+                    <div class="step-number">04</div>
+                    <div class="step-icon"><span class="material-icons-round">insights</span></div>
+                    <h3>Visualização</h3>
+                    <p>Veja os detalhes de cada bairro com métricas claras para tomar a melhor decisão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-section" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Análise</span>
+                <h2>Configure sua Busca</h2>
+                <p>Ajuste os pesos para cada critério de 0 a 10. A IA calculará os melhores bairros.</p>
+            </div>
+
+            <div class="search-layout">
+                <div class="search-panel glass-card">
+                    <div class="panel-header">
+                        <span class="material-icons-round">tune</span>
+                        <h3>Critérios</h3>
+                    </div>
+
+                    <div class="criteria-group">
+                        <div class="input-group">
+                            <div class="input-header">
+                                <div class="input-icon income"><span class="material-icons-round">account_balance_wallet</span></div>
+                                <label for="income">Poder Aquisitivo</label>
+                                <span class="value-badge" id="income-val">5</span>
+                            </div>
+                            <p class="input-desc">Renda média dos moradores do bairro</p>
+                            <input type="range" id="income" min="0" max="10" value="5" class="slider slider-income">
+                            <div class="slider-labels"><span>Baixo</span><span>Alto</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-header">
+                                <div class="input-icon safety"><span class="material-icons-round">shield</span></div>
+                                <label for="crime">Segurança</label>
+                                <span class="value-badge" id="crime-val">5</span>
+                            </div>
+                            <p class="input-desc">Quanto menor a criminalidade, maior o score</p>
+                            <input type="range" id="crime" min="0" max="10" value="5" class="slider slider-safety">
+                            <div class="slider-labels"><span>Baixo</span><span>Alto</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-header">
+                                <div class="input-icon rent"><span class="material-icons-round">storefront</span></div>
+                                <label for="rent">Aluguel Econômico</label>
+                                <span class="value-badge" id="rent-val">5</span>
+                            </div>
+                            <p class="input-desc">Preferência por aluguéis mais acessíveis</p>
+                            <input type="range" id="rent" min="0" max="10" value="5" class="slider slider-rent">
+                            <div class="slider-labels"><span>Baixo</span><span>Alto</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-header">
+                                <div class="input-icon density"><span class="material-icons-round">business</span></div>
+                                <label for="density">Densidade Comercial</label>
+                                <span class="value-badge" id="density-val">5</span>
+                            </div>
+                            <p class="input-desc">Concentração de empresas e comércios na região</p>
+                            <input type="range" id="density" min="0" max="10" value="5" class="slider slider-density">
+                            <div class="slider-labels"><span>Baixo</span><span>Alto</span></div>
+                        </div>
+                    </div>
+
+                    <button id="search-btn" class="btn btn-primary btn-block">
+                        <span class="material-icons-round">auto_awesome</span>
+                        Executar Algoritmo de IA
+                    </button>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="results-panel" id="results-panel">
+                    <div class="results-placeholder" id="results-placeholder">
+                        <span class="material-icons-round">psychology</span>
+                        <h3>Aguardando Análise</h3>
+                        <p>Configure os critérios e clique em "Executar" para ver os melhores bairros.</p>
+                    </div>
+                    <div class="results-content hidden" id="results-content">
+                        <div class="panel-header">
+                            <span class="material-icons-round">emoji_events</span>
+                            <h3>Top 5 Bairros Recomendados</h3>
+                        </div>
+                        <div id="results-list" class="results-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ML Section -->
+    <section id="ml-section" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Machine Learning</span>
+                <h2>Perfis de Investimento (K-Means)</h2>
+                <p>Nossa inteligência artificial aplicou algoritmos de aprendizado não-supervisionado para agrupar os bairros em 3 clusters distintos com base em suas semelhanças, facilitando a decisão do investidor.</p>
+            </div>
+            <div class="steps-grid" id="clusters-grid">
+                <!-- Clusters rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats-section" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Base de Dados</span>
+                <h2>Visão Geral dos Bairros</h2>
+                <p>Dados simulados de 15 bairros de São Paulo usados pelo nosso algoritmo.</p>
+            </div>
+            <div class="data-table-card glass-card">
+                <div class="table-wrapper">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Bairro</th>
+                                <th>Renda Média</th>
+                                <th>Criminalidade</th>
+                                <th>Aluguel/m²</th>
+                                <th>Dens. Comercial</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="material-icons-round">location_city</span>
+                    URBANIS<span class="brand-accent">AI</span>
+                </div>
+                <p>Projeto Integrador — Aplicação de Inteligência Artificial em busca heurística.</p>
+                <p class="footer-copy">&copy; 2026 Urbanis AI. Dados simulados para fins acadêmicos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Analisando bairros...</p>
+    </div>
+
+    <script>
+        // ===================== EMBEDDED DATA =====================
+        const neighborhoodsData = [
+            {"id":1,"name":"Vila Madalena","income":8500,"crime":15,"rent":85,"business_density":70},
+            {"id":2,"name":"Pinheiros","income":9200,"crime":12,"rent":95,"business_density":85},
+            {"id":3,"name":"Itaim Bibi","income":12000,"crime":10,"rent":120,"business_density":95},
+            {"id":4,"name":"Capão Redondo","income":2200,"crime":55,"rent":25,"business_density":20},
+            {"id":5,"name":"Grajaú","income":1800,"crime":60,"rent":20,"business_density":15},
+            {"id":6,"name":"Moema","income":10500,"crime":8,"rent":110,"business_density":80},
+            {"id":7,"name":"Jardim Paulista","income":15000,"crime":7,"rent":130,"business_density":90},
+            {"id":8,"name":"Tatuapé","income":5500,"crime":25,"rent":55,"business_density":65},
+            {"id":9,"name":"Santana","income":4800,"crime":30,"rent":50,"business_density":60},
+            {"id":10,"name":"Butantã","income":6200,"crime":20,"rent":65,"business_density":55},
+            {"id":11,"name":"Lapa","income":5800,"crime":22,"rent":60,"business_density":65},
+            {"id":12,"name":"Perdizes","income":8800,"crime":14,"rent":90,"business_density":75},
+            {"id":13,"name":"Morumbi","income":11000,"crime":18,"rent":100,"business_density":40},
+            {"id":14,"name":"Campo Limpo","income":2500,"crime":45,"rent":30,"business_density":25},
+            {"id":15,"name":"Ipiranga","income":5200,"crime":28,"rent":55,"business_density":50}
+        ];
+
+        // ===================== AI ALGORITHM (CLIENT-SIDE) =====================
+        function searchBestLocations(priorities) {
+            const results = [];
+            for (const n of neighborhoodsData) {
+                const incomeScore = (n.income / 15000) * priorities.weight_income;
+                const crimeScore = (1 - (n.crime / 100)) * priorities.weight_crime;
+                const rentScore = (1 - (n.rent / 150)) * priorities.weight_rent;
+                const densityScore = (n.business_density / 100) * priorities.weight_density;
+                const totalScore = incomeScore + crimeScore + rentScore + densityScore;
+                results.push({
+                    name: n.name,
+                    score: Math.round(totalScore * 100) / 100,
+                    details: n
+                });
+            }
+            results.sort((a, b) => b.score - a.score);
+            return results.slice(0, 5);
+        }
+
+        // ===================== NAVBAR SCROLL =====================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ===================== SMOOTH SCROLL =====================
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===================== SLIDER VALUES =====================
+        const sliders = ['income', 'crime', 'rent', 'density'];
+        sliders.forEach(id => {
+            const input = document.getElementById(id);
+            const badge = document.getElementById(`${id}-val`);
+            input.addEventListener('input', () => {
+                badge.textContent = input.value;
+                badge.classList.add('pulse');
+                setTimeout(() => badge.classList.remove('pulse'), 300);
+            });
+        });
+
+        // ===================== SEARCH (CLIENT-SIDE) =====================
+        document.getElementById('search-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('search-btn');
+            const overlay = document.getElementById('loading-overlay');
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-icons-round spin">sync</span> Processando...';
+            overlay.classList.remove('hidden');
+
+            const priorities = {
+                weight_income: parseFloat(document.getElementById('income').value),
+                weight_crime: parseFloat(document.getElementById('crime').value),
+                weight_rent: parseFloat(document.getElementById('rent').value),
+                weight_density: parseFloat(document.getElementById('density').value)
+            };
+
+            // Simulate processing delay for UX
+            await new Promise(r => setTimeout(r, 800));
+
+            const results = searchBestLocations(priorities);
+            displayResults(results);
+
+            btn.disabled = false;
+            btn.innerHTML = '<span class="material-icons-round">auto_awesome</span> Executar Algoritmo de IA';
+            overlay.classList.add('hidden');
+        });
+
+        function displayResults(results) {
+            const list = document.getElementById('results-list');
+            const placeholder = document.getElementById('results-placeholder');
+            const content = document.getElementById('results-content');
+
+            list.innerHTML = '';
+            placeholder.classList.add('hidden');
+            content.classList.remove('hidden');
+
+            const maxScore = results.length ? results[0].score : 1;
+            const medals = ['🥇', '🥈', '🥉', '', ''];
+            const rankClasses = ['gold', 'silver', 'bronze', '', ''];
+
+            results.forEach((item, index) => {
+                const pct = ((item.score / maxScore) * 100).toFixed(0);
+                const card = document.createElement('div');
+                card.className = `result-card glass-card ${rankClasses[index]}`;
+                card.style.animationDelay = `${index * 0.1}s`;
+
+                card.innerHTML = `
+                    <div class="result-rank-badge rank-${index + 1}">${medals[index] || '#' + (index + 1)}</div>
+                    <div class="result-main">
+                        <h4>${item.name}</h4>
+                        <div class="result-score">
+                            <div class="score-bar-track">
+                                <div class="score-bar-fill" style="width: ${pct}%; animation-delay: ${index * 0.1 + 0.3}s"></div>
+                            </div>
+                            <span class="score-value">${item.score}</span>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <span class="material-icons-round">account_balance_wallet</span>
+                            <div><small>Renda</small><strong>R$ ${item.details.income.toLocaleString('pt-BR')}</strong></div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons-round">shield</span>
+                            <div><small>Criminalidade</small><strong>${item.details.crime}%</strong></div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons-round">storefront</span>
+                            <div><small>Aluguel</small><strong>R$ ${item.details.rent}/m²</strong></div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="material-icons-round">business</span>
+                            <div><small>Dens. Comercial</small><strong>${item.details.business_density}%</strong></div>
+                        </div>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+
+            document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // ===================== DATA TABLE =====================
+        const tbody = document.getElementById('data-table-body');
+        neighborhoodsData.forEach(n => {
+            const crimeClass = n.crime < 20 ? 'tag-green' : n.crime < 40 ? 'tag-yellow' : 'tag-red';
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${n.id}</td>
+                <td><strong>${n.name}</strong></td>
+                <td>R$ ${n.income.toLocaleString('pt-BR')}</td>
+                <td><span class="tag ${crimeClass}">${n.crime}%</span></td>
+                <td>R$ ${n.rent}/m²</td>
+                <td>
+                    <div class="mini-bar-track">
+                        <div class="mini-bar-fill" style="width: ${n.business_density}%"></div>
+                    </div>
+                    <small>${n.business_density}%</small>
+                </td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        // ===================== INTERSECTION OBSERVER =====================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // ===================== MACHINE LEARNING (K-MEANS SIMULATED) =====================
+        function renderClusters() {
+            const clusters = [
+                { id: 0, name: "Polos Comerciais Premium", icon: "diamond", color: "var(--accent-purple)", desc: "Alta renda e forte densidade comercial.", items: [] },
+                { id: 1, name: "Zonas Residenciais Emergentes", icon: "trending_up", color: "var(--accent-blue)", desc: "Renda intermediária e grande potencial.", items: [] },
+                { id: 2, name: "Áreas de Custo-Benefício", icon: "savings", color: "var(--accent-cyan)", desc: "Aluguel econômico com densidade moderada.", items: [] }
+            ];
+
+            // Distribuindo bairros (Simulação visual dos pesos do K-Means)
+            neighborhoodsData.forEach(n => {
+                if (n.rent >= 90 && n.income >= 9000) clusters[0].items.push(n.name);
+                else if (n.rent >= 60 || (n.income >= 5000 && n.crime < 30)) clusters[1].items.push(n.name);
+                else clusters[2].items.push(n.name);
+            });
+
+            const grid = document.getElementById('clusters-grid');
+            clusters.forEach((c, idx) => {
+                const card = document.createElement('div');
+                card.className = 'step-card glass-card';
+                card.style.borderTop = `3px solid ${c.color}`;
+                card.innerHTML = `
+                    <div class="step-icon" style="color: ${c.color}; background: ${c.color}20;"><span class="material-icons-round">${c.icon}</span></div>
+                    <h3>${c.name}</h3>
+                    <p style="margin-bottom: 1rem;">${c.desc}</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        ${c.items.map(i => `<span class="tag" style="background: rgba(255,255,255,0.05);">${i}</span>`).join('')}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        renderClusters();
+
+        document.querySelectorAll('.step-card, .section-header, .glass-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

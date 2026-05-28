@@ -1,0 +1,577 @@
+cod_distr;grupo_ipvs;n_pessoas;n_domicilios;n_setor
+355030801;Baixíssima Vulnerabilidade;26246;10759;60
+355030801;Muito Baixa Vulnerabilidade;51694;21347;101
+355030801;Baixa Vulnerabilidade;7543;3086;13
+355030801;Média Vulnerabilidade;0;0;0
+355030801;Alta Vulnerabilidade;0;0;0
+355030801;Muito Alta Vulnerabilidade;0;0;0
+355030802;Baixíssima Vulnerabilidade;33878;14250;121
+355030802;Muito Baixa Vulnerabilidade;2247;1048;9
+355030802;Baixa Vulnerabilidade;886;480;4
+355030802;Média Vulnerabilidade;0;0;0
+355030802;Alta Vulnerabilidade;0;0;0
+355030802;Muito Alta Vulnerabilidade;0;0;0
+355030803;Baixíssima Vulnerabilidade;1132;356;2
+355030803;Muito Baixa Vulnerabilidade;29804;10399;63
+355030803;Baixa Vulnerabilidade;15622;5592;28
+355030803;Média Vulnerabilidade;3495;1248;10
+355030803;Alta Vulnerabilidade;15387;5375;28
+355030803;Muito Alta Vulnerabilidade;9244;3197;22
+355030804;Baixíssima Vulnerabilidade;3157;1181;6
+355030804;Muito Baixa Vulnerabilidade;63222;23099;114
+355030804;Baixa Vulnerabilidade;13635;4866;24
+355030804;Média Vulnerabilidade;2944;1007;6
+355030804;Alta Vulnerabilidade;3219;1053;6
+355030804;Muito Alta Vulnerabilidade;2948;935;5
+355030805;Baixíssima Vulnerabilidade;323;141;1
+355030805;Muito Baixa Vulnerabilidade;72716;27595;152
+355030805;Baixa Vulnerabilidade;11881;4562;26
+355030805;Média Vulnerabilidade;2696;934;5
+355030805;Alta Vulnerabilidade;1264;419;4
+355030805;Muito Alta Vulnerabilidade;6550;2157;13
+355030806;Baixíssima Vulnerabilidade;25659;10784;83
+355030806;Muito Baixa Vulnerabilidade;2364;1119;10
+355030806;Baixa Vulnerabilidade;2968;1873;13
+355030806;Média Vulnerabilidade;0;0;0
+355030806;Alta Vulnerabilidade;1055;379;2
+355030806;Muito Alta Vulnerabilidade;1111;370;2
+355030807;Baixíssima Vulnerabilidade;29966;15613;129
+355030807;Muito Baixa Vulnerabilidade;11872;6111;50
+355030807;Baixa Vulnerabilidade;17316;9315;69
+355030807;Média Vulnerabilidade;0;0;0
+355030807;Alta Vulnerabilidade;0;0;0
+355030807;Muito Alta Vulnerabilidade;0;0;0
+355030808;Baixíssima Vulnerabilidade;11667;4566;24
+355030808;Muito Baixa Vulnerabilidade;24696;9735;50
+355030808;Baixa Vulnerabilidade;13413;5225;25
+355030808;Média Vulnerabilidade;753;321;1
+355030808;Alta Vulnerabilidade;1001;391;2
+355030808;Muito Alta Vulnerabilidade;1522;539;2
+355030809;Baixíssima Vulnerabilidade;1776;699;6
+355030809;Muito Baixa Vulnerabilidade;17010;6403;49
+355030809;Baixa Vulnerabilidade;7428;2888;17
+355030809;Média Vulnerabilidade;399;156;1
+355030809;Alta Vulnerabilidade;3385;1276;9
+355030809;Muito Alta Vulnerabilidade;1861;647;4
+355030810;Baixíssima Vulnerabilidade;3145;1500;7
+355030810;Muito Baixa Vulnerabilidade;12172;5100;52
+355030810;Baixa Vulnerabilidade;15832;7025;43
+355030810;Média Vulnerabilidade;1014;399;3
+355030810;Alta Vulnerabilidade;4205;1578;13
+355030810;Muito Alta Vulnerabilidade;845;328;2
+355030811;Baixíssima Vulnerabilidade;511;183;1
+355030811;Muito Baixa Vulnerabilidade;63972;23383;122
+355030811;Baixa Vulnerabilidade;30119;10902;66
+355030811;Média Vulnerabilidade;21606;7922;48
+355030811;Alta Vulnerabilidade;45709;16611;92
+355030811;Muito Alta Vulnerabilidade;80384;27386;171
+355030812;Baixíssima Vulnerabilidade;21097;8720;65
+355030812;Muito Baixa Vulnerabilidade;18862;7785;57
+355030812;Baixa Vulnerabilidade;9994;4630;27
+355030812;Média Vulnerabilidade;0;0;0
+355030812;Alta Vulnerabilidade;0;0;0
+355030812;Muito Alta Vulnerabilidade;583;185;1
+355030813;Baixíssima Vulnerabilidade;1139;482;4
+355030813;Muito Baixa Vulnerabilidade;72020;27221;134
+355030813;Baixa Vulnerabilidade;19659;7236;42
+355030813;Média Vulnerabilidade;8894;3263;17
+355030813;Alta Vulnerabilidade;11292;3935;23
+355030813;Muito Alta Vulnerabilidade;29363;9921;59
+355030814;Baixíssima Vulnerabilidade;11732;4877;37
+355030814;Muito Baixa Vulnerabilidade;18281;7705;57
+355030814;Baixa Vulnerabilidade;14201;6278;35
+355030814;Média Vulnerabilidade;0;0;0
+355030814;Alta Vulnerabilidade;71;24;1
+355030814;Muito Alta Vulnerabilidade;0;0;0
+355030815;Baixíssima Vulnerabilidade;49285;22017;178
+355030815;Muito Baixa Vulnerabilidade;14204;5897;45
+355030815;Baixa Vulnerabilidade;1234;495;4
+355030815;Média Vulnerabilidade;0;0;0
+355030815;Alta Vulnerabilidade;1121;376;2
+355030815;Muito Alta Vulnerabilidade;4184;1538;13
+355030816;Baixíssima Vulnerabilidade;50655;19187;107
+355030816;Muito Baixa Vulnerabilidade;53614;20803;122
+355030816;Baixa Vulnerabilidade;7102;2959;16
+355030816;Média Vulnerabilidade;0;0;0
+355030816;Alta Vulnerabilidade;267;93;1
+355030816;Muito Alta Vulnerabilidade;3758;1270;9
+355030817;Baixíssima Vulnerabilidade;7663;2853;19
+355030817;Muito Baixa Vulnerabilidade;97130;36379;197
+355030817;Baixa Vulnerabilidade;44208;16662;89
+355030817;Média Vulnerabilidade;10785;4198;24
+355030817;Alta Vulnerabilidade;24667;9205;48
+355030817;Muito Alta Vulnerabilidade;49840;17526;107
+355030818;Baixíssima Vulnerabilidade;1051;357;2
+355030818;Muito Baixa Vulnerabilidade;95726;34969;185
+355030818;Baixa Vulnerabilidade;16690;6390;26
+355030818;Média Vulnerabilidade;1986;725;6
+355030818;Alta Vulnerabilidade;1722;647;4
+355030818;Muito Alta Vulnerabilidade;23823;8445;44
+355030819;Baixíssima Vulnerabilidade;1358;469;3
+355030819;Muito Baixa Vulnerabilidade;76721;28401;150
+355030819;Baixa Vulnerabilidade;42367;15890;76
+355030819;Média Vulnerabilidade;30144;11102;62
+355030819;Alta Vulnerabilidade;53466;19619;101
+355030819;Muito Alta Vulnerabilidade;65048;23008;132
+355030820;Baixíssima Vulnerabilidade;18450;6677;35
+355030820;Muito Baixa Vulnerabilidade;60500;23520;112
+355030820;Baixa Vulnerabilidade;2400;930;4
+355030820;Média Vulnerabilidade;0;0;0
+355030820;Alta Vulnerabilidade;510;185;1
+355030820;Muito Alta Vulnerabilidade;1402;469;4
+355030821;Baixíssima Vulnerabilidade;12336;4863;26
+355030821;Muito Baixa Vulnerabilidade;57798;21481;110
+355030821;Baixa Vulnerabilidade;9297;3492;17
+355030821;Média Vulnerabilidade;0;0;0
+355030821;Alta Vulnerabilidade;870;282;1
+355030821;Muito Alta Vulnerabilidade;0;0;0
+355030822;Baixíssima Vulnerabilidade;9046;3656;22
+355030822;Muito Baixa Vulnerabilidade;77665;29157;166
+355030822;Baixa Vulnerabilidade;30107;11352;58
+355030822;Média Vulnerabilidade;26431;9779;56
+355030822;Alta Vulnerabilidade;46826;17024;97
+355030822;Muito Alta Vulnerabilidade;58180;20155;134
+355030823;Baixíssima Vulnerabilidade;2037;683;3
+355030823;Muito Baixa Vulnerabilidade;105242;38047;205
+355030823;Baixa Vulnerabilidade;18198;6693;35
+355030823;Média Vulnerabilidade;10215;3716;18
+355030823;Alta Vulnerabilidade;5719;1996;11
+355030823;Muito Alta Vulnerabilidade;40362;13674;88
+355030824;Baixíssima Vulnerabilidade;608;192;1
+355030824;Muito Baixa Vulnerabilidade;94336;33599;150
+355030824;Baixa Vulnerabilidade;14650;5295;22
+355030824;Média Vulnerabilidade;3739;1294;5
+355030824;Alta Vulnerabilidade;5870;1995;8
+355030824;Muito Alta Vulnerabilidade;15454;5125;31
+355030825;Baixíssima Vulnerabilidade;0;0;0
+355030825;Muito Baixa Vulnerabilidade;40403;14538;83
+355030825;Baixa Vulnerabilidade;31097;11438;62
+355030825;Média Vulnerabilidade;20205;6944;42
+355030825;Alta Vulnerabilidade;57019;19660;104
+355030825;Muito Alta Vulnerabilidade;43164;14200;100
+355030826;Baixíssima Vulnerabilidade;41412;20637;173
+355030826;Muito Baixa Vulnerabilidade;2723;1450;13
+355030826;Baixa Vulnerabilidade;8712;5267;43
+355030826;Média Vulnerabilidade;0;0;0
+355030826;Alta Vulnerabilidade;0;0;0
+355030826;Muito Alta Vulnerabilidade;0;0;0
+355030827;Baixíssima Vulnerabilidade;29958;11801;82
+355030827;Muito Baixa Vulnerabilidade;49659;19223;133
+355030827;Baixa Vulnerabilidade;14449;5267;36
+355030827;Média Vulnerabilidade;427;148;1
+355030827;Alta Vulnerabilidade;1637;559;3
+355030827;Muito Alta Vulnerabilidade;6337;2162;13
+355030828;Baixíssima Vulnerabilidade;452;160;1
+355030828;Muito Baixa Vulnerabilidade;58244;20991;117
+355030828;Baixa Vulnerabilidade;17228;6368;31
+355030828;Média Vulnerabilidade;8879;3189;16
+355030828;Alta Vulnerabilidade;7680;2739;14
+355030828;Muito Alta Vulnerabilidade;19270;6707;43
+355030829;Baixíssima Vulnerabilidade;14531;5814;36
+355030829;Muito Baixa Vulnerabilidade;97175;36247;191
+355030829;Baixa Vulnerabilidade;16347;6176;32
+355030829;Média Vulnerabilidade;0;0;0
+355030829;Alta Vulnerabilidade;3645;1302;6
+355030829;Muito Alta Vulnerabilidade;4958;1691;7
+355030830;Baixíssima Vulnerabilidade;0;0;0
+355030830;Muito Baixa Vulnerabilidade;63875;22704;141
+355030830;Baixa Vulnerabilidade;30927;11033;66
+355030830;Média Vulnerabilidade;52963;18311;131
+355030830;Alta Vulnerabilidade;105157;36603;224
+355030830;Muito Alta Vulnerabilidade;125076;42551;360
+355030831;Baixíssima Vulnerabilidade;0;0;0
+355030831;Muito Baixa Vulnerabilidade;38717;13783;75
+355030831;Baixa Vulnerabilidade;18195;6664;34
+355030831;Média Vulnerabilidade;15962;5515;35
+355030831;Alta Vulnerabilidade;18276;6395;34
+355030831;Muito Alta Vulnerabilidade;17034;5720;35
+355030832;Baixíssima Vulnerabilidade;80298;36845;302
+355030832;Muito Baixa Vulnerabilidade;1098;491;5
+355030832;Baixa Vulnerabilidade;281;154;2
+355030832;Média Vulnerabilidade;0;0;0
+355030832;Alta Vulnerabilidade;0;0;0
+355030832;Muito Alta Vulnerabilidade;0;0;0
+355030833;Baixíssima Vulnerabilidade;616;212;1
+355030833;Muito Baixa Vulnerabilidade;29763;10572;51
+355030833;Baixa Vulnerabilidade;10254;3541;18
+355030833;Média Vulnerabilidade;28615;9851;48
+355030833;Alta Vulnerabilidade;44381;15092;73
+355030833;Muito Alta Vulnerabilidade;34679;11586;73
+355030834;Baixíssima Vulnerabilidade;42278;17748;111
+355030834;Muito Baixa Vulnerabilidade;44523;17872;118
+355030834;Baixa Vulnerabilidade;9425;3784;25
+355030834;Média Vulnerabilidade;3556;1163;5
+355030834;Alta Vulnerabilidade;840;334;2
+355030834;Muito Alta Vulnerabilidade;13560;5092;23
+355030835;Baixíssima Vulnerabilidade;94022;45240;340
+355030835;Muito Baixa Vulnerabilidade;4822;1902;16
+355030835;Baixa Vulnerabilidade;1312;540;5
+355030835;Média Vulnerabilidade;0;0;0
+355030835;Alta Vulnerabilidade;300;91;1
+355030835;Muito Alta Vulnerabilidade;0;0;0
+355030836;Baixíssima Vulnerabilidade;3369;1241;6
+355030836;Muito Baixa Vulnerabilidade;64477;22642;125
+355030836;Baixa Vulnerabilidade;19111;6665;36
+355030836;Média Vulnerabilidade;55614;19160;103
+355030836;Alta Vulnerabilidade;42083;14488;75
+355030836;Muito Alta Vulnerabilidade;19568;6375;49
+355030837;Baixíssima Vulnerabilidade;3642;1417;7
+355030837;Muito Baixa Vulnerabilidade;122445;43732;217
+355030837;Baixa Vulnerabilidade;33928;12513;54
+355030837;Média Vulnerabilidade;18372;6509;33
+355030837;Alta Vulnerabilidade;14267;4820;24
+355030837;Muito Alta Vulnerabilidade;17595;5895;39
+355030838;Baixíssima Vulnerabilidade;40168;17178;138
+355030838;Muito Baixa Vulnerabilidade;94564;36631;229
+355030838;Baixa Vulnerabilidade;29799;11405;63
+355030838;Média Vulnerabilidade;4889;1797;13
+355030838;Alta Vulnerabilidade;18425;6596;34
+355030838;Muito Alta Vulnerabilidade;24943;8669;72
+355030839;Baixíssima Vulnerabilidade;2171;869;4
+355030839;Muito Baixa Vulnerabilidade;47886;17200;90
+355030839;Baixa Vulnerabilidade;10663;3713;21
+355030839;Média Vulnerabilidade;3188;1054;6
+355030839;Alta Vulnerabilidade;8104;2746;16
+355030839;Muito Alta Vulnerabilidade;14354;4715;30
+355030840;Baixíssima Vulnerabilidade;0;0;0
+355030840;Muito Baixa Vulnerabilidade;19823;7429;45
+355030840;Baixa Vulnerabilidade;3702;1359;7
+355030840;Média Vulnerabilidade;0;0;0
+355030840;Alta Vulnerabilidade;309;121;1
+355030840;Muito Alta Vulnerabilidade;875;304;2
+355030841;Baixíssima Vulnerabilidade;9669;3929;27
+355030841;Muito Baixa Vulnerabilidade;18835;7580;52
+355030841;Baixa Vulnerabilidade;7184;2928;19
+355030841;Média Vulnerabilidade;3163;1082;9
+355030841;Alta Vulnerabilidade;1714;528;4
+355030841;Muito Alta Vulnerabilidade;14369;4887;23
+355030842;Baixíssima Vulnerabilidade;555;199;2
+355030842;Muito Baixa Vulnerabilidade;108704;38723;267
+355030842;Baixa Vulnerabilidade;34275;12436;86
+355030842;Média Vulnerabilidade;14806;5122;37
+355030842;Alta Vulnerabilidade;18015;6255;45
+355030842;Muito Alta Vulnerabilidade;32419;10851;78
+355030843;Baixíssima Vulnerabilidade;0;0;0
+355030843;Muito Baixa Vulnerabilidade;33783;12286;87
+355030843;Baixa Vulnerabilidade;25714;9222;53
+355030843;Média Vulnerabilidade;32544;12005;78
+355030843;Alta Vulnerabilidade;99743;35585;201
+355030843;Muito Alta Vulnerabilidade;116460;39737;264
+355030844;Baixíssima Vulnerabilidade;0;0;0
+355030844;Muito Baixa Vulnerabilidade;30992;10739;55
+355030844;Baixa Vulnerabilidade;9989;3479;19
+355030844;Média Vulnerabilidade;27441;9541;49
+355030844;Alta Vulnerabilidade;27638;9498;49
+355030844;Muito Alta Vulnerabilidade;32521;10698;64
+355030845;Baixíssima Vulnerabilidade;79850;38817;321
+355030845;Muito Baixa Vulnerabilidade;543;317;2
+355030845;Baixa Vulnerabilidade;949;648;5
+355030845;Média Vulnerabilidade;0;0;0
+355030845;Alta Vulnerabilidade;0;0;0
+355030845;Muito Alta Vulnerabilidade;0;0;0
+355030846;Baixíssima Vulnerabilidade;3942;1389;7
+355030846;Muito Baixa Vulnerabilidade;98280;36479;188
+355030846;Baixa Vulnerabilidade;22647;8523;47
+355030846;Média Vulnerabilidade;35186;12833;61
+355030846;Alta Vulnerabilidade;44365;16330;85
+355030846;Muito Alta Vulnerabilidade;52671;18264;136
+355030847;Baixíssima Vulnerabilidade;0;0;0
+355030847;Muito Baixa Vulnerabilidade;73027;26851;144
+355030847;Baixa Vulnerabilidade;16276;5871;29
+355030847;Média Vulnerabilidade;10751;3732;22
+355030847;Alta Vulnerabilidade;14836;5023;31
+355030847;Muito Alta Vulnerabilidade;12844;4057;30
+355030848;Baixíssima Vulnerabilidade;53782;22643;148
+355030848;Muito Baixa Vulnerabilidade;17411;7467;60
+355030848;Baixa Vulnerabilidade;2544;1360;6
+355030848;Média Vulnerabilidade;0;0;0
+355030848;Alta Vulnerabilidade;0;0;0
+355030848;Muito Alta Vulnerabilidade;908;304;2
+355030849;Baixíssima Vulnerabilidade;29868;13387;80
+355030849;Muito Baixa Vulnerabilidade;16121;7516;47
+355030849;Baixa Vulnerabilidade;19226;10191;65
+355030849;Média Vulnerabilidade;0;0;0
+355030849;Alta Vulnerabilidade;0;0;0
+355030849;Muito Alta Vulnerabilidade;0;0;0
+355030850;Baixíssima Vulnerabilidade;1663;647;4
+355030850;Muito Baixa Vulnerabilidade;63772;24409;122
+355030850;Baixa Vulnerabilidade;9990;3870;19
+355030850;Média Vulnerabilidade;1292;411;2
+355030850;Alta Vulnerabilidade;2982;1039;6
+355030850;Muito Alta Vulnerabilidade;2544;889;6
+355030851;Baixíssima Vulnerabilidade;16615;6333;37
+355030851;Muito Baixa Vulnerabilidade;69361;26686;147
+355030851;Baixa Vulnerabilidade;11887;4598;25
+355030851;Média Vulnerabilidade;2113;828;4
+355030851;Alta Vulnerabilidade;1317;476;2
+355030851;Muito Alta Vulnerabilidade;1550;539;4
+355030852;Baixíssima Vulnerabilidade;0;0;0
+355030852;Muito Baixa Vulnerabilidade;1096;387;6
+355030852;Baixa Vulnerabilidade;0;0;0
+355030852;Média Vulnerabilidade;4960;1780;21
+355030852;Alta Vulnerabilidade;3430;1156;11
+355030852;Muito Alta Vulnerabilidade;700;244;1
+355030853;Baixíssima Vulnerabilidade;33528;12890;69
+355030853;Muito Baixa Vulnerabilidade;36382;15000;85
+355030853;Baixa Vulnerabilidade;9225;3872;21
+355030853;Média Vulnerabilidade;0;0;0
+355030853;Alta Vulnerabilidade;0;0;0
+355030853;Muito Alta Vulnerabilidade;139;49;1
+355030854;Baixíssima Vulnerabilidade;31630;14054;108
+355030854;Muito Baixa Vulnerabilidade;1020;534;5
+355030854;Baixa Vulnerabilidade;2648;1085;6
+355030854;Média Vulnerabilidade;1593;554;3
+355030854;Alta Vulnerabilidade;2938;1016;5
+355030854;Muito Alta Vulnerabilidade;3333;1155;5
+355030855;Baixíssima Vulnerabilidade;0;0;0
+355030855;Muito Baixa Vulnerabilidade;17122;5831;49
+355030855;Baixa Vulnerabilidade;9432;3204;25
+355030855;Média Vulnerabilidade;33183;11280;77
+355030855;Alta Vulnerabilidade;58936;20046;128
+355030855;Muito Alta Vulnerabilidade;28098;9090;67
+355030856;Baixíssima Vulnerabilidade;1864;693;5
+355030856;Muito Baixa Vulnerabilidade;8726;2799;21
+355030856;Baixa Vulnerabilidade;3322;1096;10
+355030856;Média Vulnerabilidade;844;294;2
+355030856;Alta Vulnerabilidade;1050;373;3
+355030856;Muito Alta Vulnerabilidade;528;150;1
+355030857;Baixíssima Vulnerabilidade;2449;835;4
+355030857;Muito Baixa Vulnerabilidade;33625;11833;57
+355030857;Baixa Vulnerabilidade;11940;4516;22
+355030857;Média Vulnerabilidade;7475;2669;11
+355030857;Alta Vulnerabilidade;6752;2423;11
+355030857;Muito Alta Vulnerabilidade;11677;3873;25
+355030858;Baixíssima Vulnerabilidade;0;0;0
+355030858;Muito Baixa Vulnerabilidade;41062;14754;91
+355030858;Baixa Vulnerabilidade;16470;5905;31
+355030858;Média Vulnerabilidade;12439;4453;28
+355030858;Alta Vulnerabilidade;26318;9025;49
+355030858;Muito Alta Vulnerabilidade;65930;22538;150
+355030859;Baixíssima Vulnerabilidade;3622;1422;10
+355030859;Muito Baixa Vulnerabilidade;98184;37252;204
+355030859;Baixa Vulnerabilidade;21206;8046;44
+355030859;Média Vulnerabilidade;1092;402;2
+355030859;Alta Vulnerabilidade;1143;380;2
+355030859;Muito Alta Vulnerabilidade;6350;2165;16
+355030860;Baixíssima Vulnerabilidade;92677;41854;319
+355030860;Muito Baixa Vulnerabilidade;7689;3340;26
+355030860;Baixa Vulnerabilidade;1559;923;9
+355030860;Média Vulnerabilidade;0;0;0
+355030860;Alta Vulnerabilidade;0;0;0
+355030860;Muito Alta Vulnerabilidade;0;0;0
+355030861;Baixíssima Vulnerabilidade;788;301;2
+355030861;Muito Baixa Vulnerabilidade;35909;12875;76
+355030861;Baixa Vulnerabilidade;6057;2248;14
+355030861;Média Vulnerabilidade;5518;1924;16
+355030861;Alta Vulnerabilidade;9195;3211;18
+355030861;Muito Alta Vulnerabilidade;29646;9764;66
+355030862;Baixíssima Vulnerabilidade;61613;29496;204
+355030862;Muito Baixa Vulnerabilidade;1973;946;9
+355030862;Baixa Vulnerabilidade;1274;653;6
+355030862;Média Vulnerabilidade;0;0;0
+355030862;Alta Vulnerabilidade;0;0;0
+355030862;Muito Alta Vulnerabilidade;0;0;0
+355030863;Baixíssima Vulnerabilidade;12365;4985;41
+355030863;Muito Baixa Vulnerabilidade;98936;37961;264
+355030863;Baixa Vulnerabilidade;33428;13061;85
+355030863;Média Vulnerabilidade;5764;2096;15
+355030863;Alta Vulnerabilidade;5854;2120;12
+355030863;Muito Alta Vulnerabilidade;21967;7734;48
+355030864;Baixíssima Vulnerabilidade;829;308;2
+355030864;Muito Baixa Vulnerabilidade;74974;26968;147
+355030864;Baixa Vulnerabilidade;8484;3054;17
+355030864;Média Vulnerabilidade;0;0;0
+355030864;Alta Vulnerabilidade;1279;449;3
+355030864;Muito Alta Vulnerabilidade;3971;1337;11
+355030865;Baixíssima Vulnerabilidade;8712;3179;18
+355030865;Muito Baixa Vulnerabilidade;40742;15108;103
+355030865;Baixa Vulnerabilidade;32979;12228;72
+355030865;Média Vulnerabilidade;5130;1827;14
+355030865;Alta Vulnerabilidade;13166;4591;26
+355030865;Muito Alta Vulnerabilidade;16119;5605;33
+355030866;Baixíssima Vulnerabilidade;9645;5760;46
+355030866;Muito Baixa Vulnerabilidade;24025;12592;102
+355030866;Baixa Vulnerabilidade;19523;10121;82
+355030866;Média Vulnerabilidade;552;262;2
+355030866;Alta Vulnerabilidade;2034;811;5
+355030866;Muito Alta Vulnerabilidade;0;0;0
+355030867;Baixíssima Vulnerabilidade;27321;10426;72
+355030867;Muito Baixa Vulnerabilidade;49350;18233;121
+355030867;Baixa Vulnerabilidade;23130;9038;54
+355030867;Média Vulnerabilidade;4492;1459;10
+355030867;Alta Vulnerabilidade;2262;751;5
+355030867;Muito Alta Vulnerabilidade;24772;8342;43
+355030868;Baixíssima Vulnerabilidade;13772;5508;34
+355030868;Muito Baixa Vulnerabilidade;137554;52659;329
+355030868;Baixa Vulnerabilidade;35555;13740;73
+355030868;Média Vulnerabilidade;8310;2959;15
+355030868;Alta Vulnerabilidade;7412;2648;16
+355030868;Muito Alta Vulnerabilidade;57963;20633;110
+355030869;Baixíssima Vulnerabilidade;35587;16819;131
+355030869;Muito Baixa Vulnerabilidade;32724;16570;126
+355030869;Baixa Vulnerabilidade;11577;5965;45
+355030869;Média Vulnerabilidade;0;0;0
+355030869;Alta Vulnerabilidade;356;169;2
+355030869;Muito Alta Vulnerabilidade;0;0;0
+355030870;Baixíssima Vulnerabilidade;66875;27323;171
+355030870;Muito Baixa Vulnerabilidade;42172;17633;106
+355030870;Baixa Vulnerabilidade;845;395;3
+355030870;Média Vulnerabilidade;0;0;0
+355030870;Alta Vulnerabilidade;977;301;1
+355030870;Muito Alta Vulnerabilidade;30;11;1
+355030871;Baixíssima Vulnerabilidade;62783;25691;157
+355030871;Muito Baixa Vulnerabilidade;18657;7755;48
+355030871;Baixa Vulnerabilidade;2814;1562;9
+355030871;Média Vulnerabilidade;0;0;0
+355030871;Alta Vulnerabilidade;0;0;0
+355030871;Muito Alta Vulnerabilidade;0;0;0
+355030872;Baixíssima Vulnerabilidade;5774;2172;11
+355030872;Muito Baixa Vulnerabilidade;113114;43591;189
+355030872;Baixa Vulnerabilidade;7284;3161;10
+355030872;Média Vulnerabilidade;1283;598;2
+355030872;Alta Vulnerabilidade;5041;1760;6
+355030872;Muito Alta Vulnerabilidade;5256;1703;11
+355030873;Baixíssima Vulnerabilidade;666;296;1
+355030873;Muito Baixa Vulnerabilidade;96540;34724;163
+355030873;Baixa Vulnerabilidade;27733;10114;49
+355030873;Média Vulnerabilidade;7520;2706;13
+355030873;Alta Vulnerabilidade;7487;2724;13
+355030873;Muito Alta Vulnerabilidade;15047;5062;32
+355030874;Baixíssima Vulnerabilidade;0;0;0
+355030874;Muito Baixa Vulnerabilidade;56346;20368;107
+355030874;Baixa Vulnerabilidade;6048;2134;13
+355030874;Média Vulnerabilidade;6026;2167;13
+355030874;Alta Vulnerabilidade;3961;1406;7
+355030874;Muito Alta Vulnerabilidade;8128;2797;22
+355030875;Baixíssima Vulnerabilidade;0;0;0
+355030875;Muito Baixa Vulnerabilidade;45053;16113;79
+355030875;Baixa Vulnerabilidade;6503;2246;11
+355030875;Média Vulnerabilidade;16464;5810;33
+355030875;Alta Vulnerabilidade;15155;5195;30
+355030875;Muito Alta Vulnerabilidade;62746;20909;126
+355030876;Baixíssima Vulnerabilidade;2425;879;4
+355030876;Muito Baixa Vulnerabilidade;121122;43573;201
+355030876;Baixa Vulnerabilidade;33590;12063;56
+355030876;Média Vulnerabilidade;32328;11579;51
+355030876;Alta Vulnerabilidade;21265;7595;34
+355030876;Muito Alta Vulnerabilidade;55386;18847;118
+355030877;Baixíssima Vulnerabilidade;90068;39358;312
+355030877;Muito Baixa Vulnerabilidade;31930;13515;113
+355030877;Baixa Vulnerabilidade;4484;2264;14
+355030877;Média Vulnerabilidade;0;0;0
+355030877;Alta Vulnerabilidade;0;0;0
+355030877;Muito Alta Vulnerabilidade;1279;445;4
+355030878;Baixíssima Vulnerabilidade;401;168;1
+355030878;Muito Baixa Vulnerabilidade;6173;2755;23
+355030878;Baixa Vulnerabilidade;14493;6543;43
+355030878;Média Vulnerabilidade;0;0;0
+355030878;Alta Vulnerabilidade;1553;666;7
+355030878;Muito Alta Vulnerabilidade;0;0;0
+355030879;Baixíssima Vulnerabilidade;4277;1622;8
+355030879;Muito Baixa Vulnerabilidade;27164;10427;58
+355030879;Baixa Vulnerabilidade;3854;1608;5
+355030879;Média Vulnerabilidade;427;145;1
+355030879;Alta Vulnerabilidade;0;0;0
+355030879;Muito Alta Vulnerabilidade;2123;753;7
+355030880;Baixíssima Vulnerabilidade;63050;25690;161
+355030880;Muito Baixa Vulnerabilidade;27440;11659;76
+355030880;Baixa Vulnerabilidade;6304;2760;13
+355030880;Média Vulnerabilidade;0;0;0
+355030880;Alta Vulnerabilidade;0;0;0
+355030880;Muito Alta Vulnerabilidade;883;293;1
+355030881;Baixíssima Vulnerabilidade;6620;2436;15
+355030881;Muito Baixa Vulnerabilidade;78514;28106;150
+355030881;Baixa Vulnerabilidade;14689;5283;28
+355030881;Média Vulnerabilidade;8272;2964;16
+355030881;Alta Vulnerabilidade;17247;5880;32
+355030881;Muito Alta Vulnerabilidade;69012;23291;119
+355030882;Baixíssima Vulnerabilidade;16507;6644;37
+355030882;Muito Baixa Vulnerabilidade;77827;30496;153
+355030882;Baixa Vulnerabilidade;4406;1822;8
+355030882;Média Vulnerabilidade;0;0;0
+355030882;Alta Vulnerabilidade;0;0;0
+355030882;Muito Alta Vulnerabilidade;224;76;1
+355030883;Baixíssima Vulnerabilidade;78118;32584;227
+355030883;Muito Baixa Vulnerabilidade;9103;3566;23
+355030883;Baixa Vulnerabilidade;11277;4702;19
+355030883;Média Vulnerabilidade;922;287;2
+355030883;Alta Vulnerabilidade;1154;384;3
+355030883;Muito Alta Vulnerabilidade;67308;24513;91
+355030884;Baixíssima Vulnerabilidade;0;0;0
+355030884;Muito Baixa Vulnerabilidade;72605;25405;122
+355030884;Baixa Vulnerabilidade;15380;5310;27
+355030884;Média Vulnerabilidade;24442;8694;39
+355030884;Alta Vulnerabilidade;15263;5283;35
+355030884;Muito Alta Vulnerabilidade;12386;4066;29
+355030885;Baixíssima Vulnerabilidade;21780;8528;49
+355030885;Muito Baixa Vulnerabilidade;63394;24204;112
+355030885;Baixa Vulnerabilidade;5653;2052;11
+355030885;Média Vulnerabilidade;558;236;1
+355030885;Alta Vulnerabilidade;0;0;0
+355030885;Muito Alta Vulnerabilidade;539;200;1
+355030886;Baixíssima Vulnerabilidade;12429;4984;26
+355030886;Muito Baixa Vulnerabilidade;34344;13131;68
+355030886;Baixa Vulnerabilidade;3562;1426;8
+355030886;Média Vulnerabilidade;0;0;0
+355030886;Alta Vulnerabilidade;0;0;0
+355030886;Muito Alta Vulnerabilidade;1186;438;3
+355030887;Baixíssima Vulnerabilidade;352;165;1
+355030887;Muito Baixa Vulnerabilidade;62586;22546;121
+355030887;Baixa Vulnerabilidade;15882;5453;28
+355030887;Média Vulnerabilidade;9715;3311;18
+355030887;Alta Vulnerabilidade;11870;4061;26
+355030887;Muito Alta Vulnerabilidade;33392;10930;56
+355030888;Baixíssima Vulnerabilidade;33147;13562;94
+355030888;Muito Baixa Vulnerabilidade;7705;3162;26
+355030888;Baixa Vulnerabilidade;1455;760;4
+355030888;Média Vulnerabilidade;150;42;1
+355030888;Alta Vulnerabilidade;1252;414;2
+355030888;Muito Alta Vulnerabilidade;1710;630;3
+355030889;Baixíssima Vulnerabilidade;8363;3441;19
+355030889;Muito Baixa Vulnerabilidade;50534;19819;105
+355030889;Baixa Vulnerabilidade;18686;7261;35
+355030889;Média Vulnerabilidade;5855;2358;13
+355030889;Alta Vulnerabilidade;6544;2327;11
+355030889;Muito Alta Vulnerabilidade;17272;6290;39
+355030890;Baixíssima Vulnerabilidade;112690;51636;489
+355030890;Muito Baixa Vulnerabilidade;8043;3533;34
+355030890;Baixa Vulnerabilidade;3581;2076;19
+355030890;Média Vulnerabilidade;0;0;0
+355030890;Alta Vulnerabilidade;152;52;1
+355030890;Muito Alta Vulnerabilidade;1072;361;2
+355030891;Baixíssima Vulnerabilidade;2992;1120;7
+355030891;Muito Baixa Vulnerabilidade;85126;31829;175
+355030891;Baixa Vulnerabilidade;12264;4729;27
+355030891;Média Vulnerabilidade;1055;396;2
+355030891;Alta Vulnerabilidade;741;269;1
+355030891;Muito Alta Vulnerabilidade;828;285;3
+355030892;Baixíssima Vulnerabilidade;361;126;1
+355030892;Muito Baixa Vulnerabilidade;83979;30785;171
+355030892;Baixa Vulnerabilidade;14790;5456;33
+355030892;Média Vulnerabilidade;1702;621;3
+355030892;Alta Vulnerabilidade;9226;3237;19
+355030892;Muito Alta Vulnerabilidade;4766;1671;10
+355030893;Baixíssima Vulnerabilidade;19815;7976;45
+355030893;Muito Baixa Vulnerabilidade;65041;25823;125
+355030893;Baixa Vulnerabilidade;13394;5923;24
+355030893;Média Vulnerabilidade;395;162;2
+355030893;Alta Vulnerabilidade;1236;412;2
+355030893;Muito Alta Vulnerabilidade;5219;1838;9
+355030894;Baixíssima Vulnerabilidade;44242;17281;116
+355030894;Muito Baixa Vulnerabilidade;40862;15839;121
+355030894;Baixa Vulnerabilidade;8206;3572;21
+355030894;Média Vulnerabilidade;654;222;2
+355030894;Alta Vulnerabilidade;1123;387;2
+355030894;Muito Alta Vulnerabilidade;28123;10008;41
+355030895;Baixíssima Vulnerabilidade;11418;4318;30
+355030895;Muito Baixa Vulnerabilidade;49056;18395;116
+355030895;Baixa Vulnerabilidade;8543;3188;15
+355030895;Média Vulnerabilidade;130;38;1
+355030895;Alta Vulnerabilidade;3623;1275;6
+355030895;Muito Alta Vulnerabilidade;15342;5377;30
+355030896;Baixíssima Vulnerabilidade;0;0;0
+355030896;Muito Baixa Vulnerabilidade;30994;10892;61
+355030896;Baixa Vulnerabilidade;12426;4322;23
+355030896;Média Vulnerabilidade;43520;14944;78
+355030896;Alta Vulnerabilidade;58313;19905;92
+355030896;Muito Alta Vulnerabilidade;18487;6078;41

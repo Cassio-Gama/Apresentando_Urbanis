@@ -1,0 +1,11 @@
+{
+  "profile": "pharmacy-premium",
+  "displayName": "Farmácia Premium",
+  "weights": {
+    "infra": { "dens": 0.40, "mob": 0.60 },
+    "market": { "central": 0.60, "pop": 0.20, "idade": 0.20 },
+    "risk": { "crime": 0.50, "socio": 0.50 },
+    "balance": { "infra": 0.30, "market": 0.70 },
+    "alpha": 0.20
+  }
+}

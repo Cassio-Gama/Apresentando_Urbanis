@@ -1,0 +1,11 @@
+{
+  "profile": "retail-popular",
+  "displayName": "Varejo / Loja Premium",
+  "weights": {
+    "infra": { "dens": 0.30, "mob": 0.70 },
+    "market": { "central": 0.80, "pop": 0.10, "idade": 0.10 },
+    "risk": { "crime": 0.40, "socio": 0.60 },
+    "balance": { "infra": 0.15, "market": 0.85 },
+    "alpha": 0.45
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "profile": "gym",
+  "displayName": "Academia / Coworking",
+  "weights": {
+    "infra": { "dens": 0.40, "mob": 0.60 },
+    "market": { "central": 0.70, "pop": 0.10, "idade": 0.20 },
+    "risk": { "crime": 0.60, "socio": 0.40 },
+    "balance": { "infra": 0.20, "market": 0.80 },
+    "alpha": 0.25
+  }
+}

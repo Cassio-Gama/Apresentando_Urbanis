@@ -1,0 +1,144 @@
+@import "leaflet/dist/leaflet.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme Tokens */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 354 77% 43%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 354 77% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 354 77% 43%;
+    --radius: 8px;
+
+    /* Original Python Color System */
+    --chart-1: 142 71% 45%; /* #22C55E - Green */
+    --chart-2: 45 93% 47%;  /* #EAB308 - Yellow */
+    --chart-3: 0 84% 60%;   /* #EF4444 - Red */
+    
+    /* Variable Specific Colors from Python */
+    --viz-infra: 221 83% 53%;   /* #2563EB - Blue (Oportunidade) */
+    --viz-market: 262 80% 60%;  /* Purple (Mercado/Centralidade) */
+    --viz-risk: 0 84% 60%;      /* #EF4444 - Red (Risco) */
+  }
+
+  .dark {
+    /* Dark Theme Tokens */
+    --background: 220 15% 7%;
+    --foreground: 0 0% 98%;
+    --card: 216 10% 10%;
+    --card-foreground: 0 0% 98%;
+    --primary: 354 77% 43%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 216 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 216 10% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 354 77% 43%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.07;
+    --input: 0 0% 100% / 0.07;
+    --ring: 354 77% 43%;
+
+    /* Original Python Color System */
+    --chart-1: 142 71% 45%;
+    --chart-2: 45 93% 47%;
+    --chart-3: 0 84% 60%;
+
+    /* Variable Specific Colors from Python */
+    --viz-infra: 221 83% 53%;
+    --viz-market: 262 80% 60%;
+    --viz-risk: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+  }
+  .font-mono {
+    font-family: 'DM Mono', monospace;
+  }
+}
+
+.transition-fast {
+  transition: all 150ms ease;
+}
+
+/* Leaflet Overrides */
+.leaflet-container {
+  background: hsl(var(--background)) !important;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  border: 1px solid hsl(var(--border));
+  box-shadow: none !important;
+}
+.leaflet-custom-tooltip {
+  background: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-shadow: none !important;
+  color: hsl(var(--card-foreground)) !important;
+}
+
+@media print {
+  aside {
+    display: none !important;
+  }
+  header {
+    display: none !important;
+  }
+  footer {
+    display: none !important;
+  }
+  .pl-64 {
+    padding-left: 0 !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .border, border-border {
+    border-color: #e2e8f0 !important;
+  }
+  .bg-card {
+    background-color: white !important;
+    color: black !important;
+  }
+}
