@@ -2986,3 +2986,45 @@ body.teleprompter-active .teleprompter-nav {
     font-weight: 700;
     text-shadow: 0 0 12px rgba(196, 18, 48, 0.5);
 }
+
+.btn-demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(196, 18, 48, 0.08);
+    border: 1px solid rgba(196, 18, 48, 0.35);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.75rem, 1vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s var(--easing);
+    backdrop-filter: blur(10px);
+    pointer-events: auto; /* IMPORTANTE: anula pointer-events: none do scene-content */
+    box-shadow: 0 4px 15px rgba(196, 18, 48, 0.15);
+    margin-top: 2vh;
+}
+
+.btn-demo-link:hover {
+    background: var(--red-brand);
+    border-color: var(--red-brand);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(196, 18, 48, 0.45), 0 0 15px rgba(196, 18, 48, 0.2);
+}
+
+.btn-arrow-icon {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    transition: transform 0.3s var(--easing);
+}
+
+.btn-demo-link:hover .btn-arrow-icon {
+    transform: translateX(4px);
+}

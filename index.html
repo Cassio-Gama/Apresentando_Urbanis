@@ -229,31 +229,49 @@
             <section class="scene scene-center" data-speaker="Renan" data-role="Demo" data-duration="30"
                 data-notes="Aqui temos a plataforma funcionando. Primeiro selecionamos o segmento do negócio e o perfil operacional. A partir dessas escolhas, o UrbanScore é recalculado automaticamente para refletir as características daquela operação. Ou seja, cada negócio passa a enxergar a cidade através dos critérios mais relevantes para sua realidade.">
 
-                <div class="hero-fullscreen reveal-scale-up" style="align-items: flex-start; padding-top: 5vh;">
-                    <!-- VÍDEO CINEMATOGRÁFICO PREMIUM - Altura ajustada para dar espaço às legendas -->
-                    <div class="premium-product-frame video-wrapper cinematic-pan-video" style="max-height: min(58vh, 560px);">
+                <div class="hero-fullscreen reveal-scale-up" style="align-items: flex-start; padding-top: 4vh;">
+                    <!-- VÍDEO CINEMATOGRÁFICO PREMIUM - Altura expandida (vídeo como principal) -->
+                    <div class="premium-product-frame video-wrapper cinematic-pan-video" style="max-height: min(68vh, 680px);">
                         <video src="./assets/urbanis_demo.mp4" autoplay loop muted playsinline
                             class="hero-video-fullscreen"></video>
                     </div>
                 </div>
 
-                <div class="scene-content text-center" style="z-index: 15; position: absolute; bottom: 4vh; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center;">
-                    <div class="chapter-marker reveal-fade delay-1" style="margin-bottom: 2vh;">08. Demonstração</div>
+                <div class="scene-content text-center" style="z-index: 15; position: absolute; bottom: 2.5vh; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center;">
+                    <div class="chapter-marker reveal-fade delay-1" style="margin-bottom: 1.2vh; padding: 0.35rem 1.1rem; font-size: 0.75rem;">08. Demonstração</div>
                     
-                    <div class="demo-caption-panel reveal-fade delay-2" style="width: 90%; max-width: 900px;">
-                        <h1 class="headline shadow-heavy" style="font-size: clamp(1.6rem, 2.5vw, 2.3rem); line-height: 1.2; font-weight: 700; color: #FFFFFF;">
-                            Personalizado para cada operação.
-                        </h1>
-                        <p class="subtitle shadow-heavy" style="font-size: clamp(0.95rem, 1.4vw, 1.15rem); margin-top: 1vh; color: #A1A1A6; font-weight: 300;">
-                            Porque cada negócio enxerga a cidade de uma forma diferente.
-                        </p>
-                        
-                        <div class="formula-badge reveal-fade delay-3">
-                            <span class="formula-part">Segmento</span>
-                            <span class="formula-operator">+</span>
-                            <span class="formula-part">Perfil Operacional</span>
-                            <span class="formula-operator">=</span>
-                            <span class="formula-result">UrbanScore Personalizado</span>
+                    <div class="demo-caption-panel reveal-fade delay-2" style="width: 90%; max-width: 1000px; padding: 1.5vh 2.5vw; border-radius: 16px; background: rgba(5, 5, 5, 0.7); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 3vw; flex-wrap: wrap;">
+                            
+                            <!-- Lado Esquerdo: Texto de Suporte -->
+                            <div style="text-align: left; flex: 1.4; min-width: 280px;">
+                                <h1 class="headline shadow-heavy" style="font-size: clamp(1.15rem, 1.8vw, 1.45rem); line-height: 1.2; font-weight: 700; color: #FFFFFF; margin: 0;">
+                                    Personalizado para cada operação.
+                                </h1>
+                                <p class="subtitle shadow-heavy" style="font-size: clamp(0.85rem, 1vw, 0.95rem); margin-top: 0.5vh; color: #A1A1A6; font-weight: 300; line-height: 1.3; margin-bottom: 0;">
+                                    Porque cada negócio enxerga a cidade de uma forma diferente.
+                                </p>
+                            </div>
+                            
+                            <!-- Lado Direito: Fórmula & Botão Acessar -->
+                            <div style="display: flex; align-items: center; gap: 1.5vw; flex: 1.2; min-width: 280px; justify-content: flex-end; flex-wrap: wrap;">
+                                <div class="formula-badge" style="margin-top: 0; padding: 0.55rem 1.2rem; font-size: clamp(0.72rem, 0.85vw, 0.82rem); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);">
+                                    <span class="formula-part">Segmento</span>
+                                    <span class="formula-operator">+</span>
+                                    <span class="formula-part">Perfil</span>
+                                    <span class="formula-operator">=</span>
+                                    <span class="formula-result">UrbanScore</span>
+                                </div>
+                                
+                                <a href="https://urbanis-platform.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-demo-link" style="margin-top: 0; padding: 0.6rem 1.4rem; font-size: clamp(0.72rem, 0.85vw, 0.82rem);">
+                                    <span>Acessar</span>
+                                    <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
