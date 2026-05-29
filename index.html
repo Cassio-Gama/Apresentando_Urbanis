@@ -440,9 +440,9 @@
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
-                        row-gap: 6vh;
-                        column-gap: 5vw;
-                        margin-top: 6vh;
+                        row-gap: 3vh;
+                        column-gap: 4vw;
+                        margin-top: 2vh;
                         max-width: 1200px;
                         margin-left: auto;
                         margin-right: auto;
@@ -452,17 +452,17 @@
                         flex-direction: column;
                         align-items: center;
                         text-align: center;
-                        width: 280px;
+                        width: 260px;
                     }
                     .team-photo-wrapper {
-                        width: 190px;
-                        height: 190px;
+                        width: clamp(120px, 16vh, 160px);
+                        height: clamp(120px, 16vh, 160px);
                         border-radius: 50%;
                         overflow: hidden;
-                        margin-bottom: 2.5vh;
+                        margin-bottom: 1.5vh;
                         border: 1px solid rgba(255, 255, 255, 0.05);
                         background: #050505;
-                        box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+                        box-shadow: 0 15px 30px rgba(0,0,0,0.8);
                     }
                     .team-photo {
                         width: 100%;
@@ -477,17 +477,17 @@
                     }
                     .team-name {
                         color: #FFFFFF;
-                        font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+                        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
                         font-weight: 500;
                         margin: 0;
                         letter-spacing: 0.02em;
                     }
                     .team-role {
                         color: #8E8E93;
-                        font-size: clamp(0.95rem, 1.1vw, 1.1rem);
-                        margin-top: 1vh;
+                        font-size: clamp(0.85rem, 1vw, 1rem);
+                        margin-top: 0.5vh;
                         font-weight: 400;
-                        line-height: 1.5;
+                        line-height: 1.4;
                         max-width: 240px;
                     }
                     /* Custom Delays */
@@ -513,7 +513,7 @@
                     .delay-role-5 { animation-delay: 2.2s; }
 
                     .creative-credit {
-                        margin-top: 10vh;
+                        margin-top: 5vh;
                         font-size: clamp(0.65rem, 0.75vw, 0.8rem);
                         color: #6E6E73;
                         text-transform: uppercase;
@@ -534,10 +534,10 @@
                     <!-- Fundo totalmente preto premium -->
                 </div>
 
-                <div class="scene-content text-center" style="width: 100%; z-index: 10; padding-top: 4vh;">
+                <div class="scene-content text-center" style="width: 100%; z-index: 10; padding-top: 2vh; display: flex; flex-direction: column; justify-content: center; height: 100%;">
                     
-                    <h1 class="headline reveal-fade delay-title" style="font-size: clamp(2.8rem, 4.5vw, 5rem); font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF; margin-bottom: 1vh; line-height: 1.1;">Transformando dados em decisões.</h1>
-                    <p class="subtitle reveal-fade delay-subtitle" style="font-size: clamp(0.9rem, 1.2vw, 1.3rem); color: #EE0000; letter-spacing: 0.15em; font-weight: 400; text-transform: uppercase; margin-bottom: 8vh;">Equipe Urbanis</p>
+                    <h1 class="headline reveal-fade delay-title" style="font-size: clamp(2.2rem, 3.5vw, 4rem); font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF; margin-bottom: 0.5vh; line-height: 1.1;">Transformando dados em decisões.</h1>
+                    <p class="subtitle reveal-fade delay-subtitle" style="font-size: clamp(0.85rem, 1.1vw, 1.2rem); color: #EE0000; letter-spacing: 0.15em; font-weight: 400; text-transform: uppercase; margin-bottom: 4vh;">Equipe Urbanis</p>
                     
                     <div class="team-grid">
                         
@@ -590,8 +590,7 @@
 
                     <!-- Crédito Especial -->
                     <div class="creative-credit reveal-fade">
-                        Presentation Design & Creative Direction
-                        <span class="credit-name">Cássio Gama</span>
+                        Fundação Escola de Comércio Álvares Penteado
                     </div>
 
                 </div>
