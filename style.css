@@ -2821,3 +2821,168 @@ body.teleprompter-active .teleprompter-nav {
     margin-top: 1vh;
     line-height: 1.4;
 }
+
+/* =========================================================
+   SLIDE 13 - OPERAÇÃO INICIAL (FINANCIAL DASHBOARD)
+   ========================================================= */
+.operation-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3vw;
+    width: 100%;
+    max-width: 1100px;
+    margin: 4vh auto 0;
+}
+
+.operation-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 4vh 2.5vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.6s var(--easing);
+    backdrop-filter: blur(20px);
+}
+
+.operation-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.operation-card.highlighted {
+    border-color: rgba(196, 18, 48, 0.35);
+    background: linear-gradient(180deg, rgba(196, 18, 48, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: 0 15px 35px rgba(196, 18, 48, 0.1);
+}
+
+.operation-card.highlighted:hover {
+    border-color: rgba(196, 18, 48, 0.7);
+    background: linear-gradient(180deg, rgba(196, 18, 48, 0.08) 0%, rgba(0, 0, 0, 0.5) 100%);
+    box-shadow: 0 25px 50px rgba(196, 18, 48, 0.2);
+}
+
+.operation-card .metric-huge {
+    font-size: clamp(5rem, 8vw, 8.5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    background: linear-gradient(180deg, #FFFFFF 0%, #7E7E83 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5vh;
+}
+
+.operation-card .metric-large {
+    font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+}
+
+.operation-card .card-title {
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
+    font-weight: 600;
+    color: #E5E5EA;
+    letter-spacing: -0.01em;
+}
+
+.operation-card .card-subtitle {
+    font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+    color: #8E8E93;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5vh;
+    font-weight: 600;
+}
+
+.operation-card .cost-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5vh 0 0;
+    text-align: left;
+    width: 100%;
+}
+
+.operation-card .cost-list li {
+    font-size: clamp(0.85rem, 1vw, 1.05rem);
+    color: #A1A1A6;
+    padding: 0.8vh 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+}
+
+.operation-card .cost-list li:last-child {
+    border-bottom: none;
+}
+
+.operation-card .cost-list li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: var(--red-brand);
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 6px var(--red-brand);
+}
+
+/* =========================================================
+   SLIDE 08 - DEMONSTRAÇÃO (REFINED OVERLAY)
+   ========================================================= */
+.demo-caption-panel {
+    background: rgba(5, 5, 5, 0.45);
+    backdrop-filter: blur(25px) saturate(120%);
+    -webkit-backdrop-filter: blur(25px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3vh 4vw;
+    border-radius: 24px;
+    margin: 1.5vh auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    max-width: 900px;
+    width: 100%;
+}
+
+.formula-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    padding: 0.8rem 1.8rem;
+    margin-top: 2vh;
+    font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+    letter-spacing: 0.04em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    text-transform: uppercase;
+}
+
+.formula-part {
+    color: #F5F5F7;
+    font-weight: 600;
+}
+
+.formula-operator {
+    color: #8E8E93;
+    font-weight: 300;
+}
+
+.formula-result {
+    color: var(--red-brand);
+    font-weight: 700;
+    text-shadow: 0 0 12px rgba(196, 18, 48, 0.5);
+}

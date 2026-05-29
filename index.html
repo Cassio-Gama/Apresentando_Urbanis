@@ -229,25 +229,33 @@
             <section class="scene scene-center" data-speaker="Renan" data-role="Demo" data-duration="30"
                 data-notes="Aqui temos a plataforma funcionando. Primeiro selecionamos o segmento do negócio e o perfil operacional. A partir dessas escolhas, o UrbanScore é recalculado automaticamente para refletir as características daquela operação. Ou seja, cada negócio passa a enxergar a cidade através dos critérios mais relevantes para sua realidade.">
 
-                <div class="hero-fullscreen reveal-scale-up" style="align-items: flex-start; padding-top: 6vh;">
-                    <!-- VÍDEO CINEMATOGRÁFICO PREMIUM -->
-                    <div class="premium-product-frame video-wrapper cinematic-pan-video">
+                <div class="hero-fullscreen reveal-scale-up" style="align-items: flex-start; padding-top: 5vh;">
+                    <!-- VÍDEO CINEMATOGRÁFICO PREMIUM - Altura ajustada para dar espaço às legendas -->
+                    <div class="premium-product-frame video-wrapper cinematic-pan-video" style="max-height: min(58vh, 560px);">
                         <video src="./assets/urbanis_demo.mp4" autoplay loop muted playsinline
                             class="hero-video-fullscreen"></video>
                     </div>
                 </div>
 
-                <div class="scene-content text-center absolute-bottom reveal-fade delay-2"
-                    style="z-index: 15; bottom: 4vh; width: 100%;">
-                    <div class="chapter-marker reveal-fade delay-1">08. Demonstração</div>
-                    <h1 class="headline shadow-heavy" style="font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1;">
-                        Personalizado para cada operação.</h1>
-                    <p class="subtitle shadow-heavy"
-                        style="font-size: clamp(1.1rem, 1.8vw, 1.5rem); margin-top: 1vh; opacity: 0.9; color: #F5F5F7;">
-                        Porque cada negócio enxerga a cidade de uma forma diferente.</p>
-                    <p class="subtitle shadow-heavy mt-medium reveal-fade delay-3"
-                        style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">
-                        Segmento + Perfil Operacional = UrbanScore Personalizado</p>
+                <div class="scene-content text-center" style="z-index: 15; position: absolute; bottom: 4vh; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center;">
+                    <div class="chapter-marker reveal-fade delay-1" style="margin-bottom: 2vh;">08. Demonstração</div>
+                    
+                    <div class="demo-caption-panel reveal-fade delay-2" style="width: 90%; max-width: 900px;">
+                        <h1 class="headline shadow-heavy" style="font-size: clamp(1.6rem, 2.5vw, 2.3rem); line-height: 1.2; font-weight: 700; color: #FFFFFF;">
+                            Personalizado para cada operação.
+                        </h1>
+                        <p class="subtitle shadow-heavy" style="font-size: clamp(0.95rem, 1.4vw, 1.15rem); margin-top: 1vh; color: #A1A1A6; font-weight: 300;">
+                            Porque cada negócio enxerga a cidade de uma forma diferente.
+                        </p>
+                        
+                        <div class="formula-badge reveal-fade delay-3">
+                            <span class="formula-part">Segmento</span>
+                            <span class="formula-operator">+</span>
+                            <span class="formula-part">Perfil Operacional</span>
+                            <span class="formula-operator">=</span>
+                            <span class="formula-result">UrbanScore Personalizado</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -376,7 +384,7 @@
 
             <!-- SLIDE 13 — OPERAÇÃO INICIAL -->
             <section class="scene scene-center" data-speaker="Cássio" data-role="Operação Inicial" data-duration="25"
-                data-notes="Para avaliar a viabilidade da operação, simulamos um cenário inicial de funcionamento da Urbanis. Como nosso modelo é baseado em consultoria especializada, não dependemos de centenas de clientes simultaneamente. Em uma operação enxuta, estimamos a execução de cinco projetos por mês. Sendo dois estudos Essenciais, dois de Expansão e um Corporativo. Nesse cenário, a receita mensal estimada seria de aproximadamente vinte e quatro mil reais. Conforme a metodologia amadurece e novos profissionais são incorporados à equipe, a capacidade operacional pode ser ampliada de forma escalável. E é justamente pensando nessa evolução que definimos os próximos passos da Urbanis.">
+                data-notes="Para avaliar a viabilidade da operação, simulamos um cenário inicial de funcionamento da Urbanis. Como nosso modelo é baseado em consultoria especializada, não dependemos de centenas de clientes simultaneamente. Em uma operação enxuta, estimamos a execução de cinco projetos por mês. Sendo dois estudos Essenciais, dois de Expansão e um Corporativo. Nesse cenário, a receita mensal estimada seria de aproximadamente vinte e quatro mil reais, com custos operacionais estimados em oito mil reais. Isso resulta em um resultado operacional de dezesseis mil reais mensais. Conforme a metodologia amadurece e novos profissionais são incorporados à equipe, a capacidade operacional pode ser ampliada de forma escalável. E é justamente pensando nessa evolução que definimos os próximos passos da Urbanis.">
                 <div class="cinematic-bg">
                     <div class="bg-overlay-heavy"></div>
                 </div>
@@ -384,69 +392,58 @@
                 <div class="scene-content text-center" style="width: 100%;">
                     <div class="chapter-marker reveal-fade delay-1">13. Operação Inicial</div>
 
-                    <div
-                        style="display: flex; justify-content: center; align-items: stretch; gap: 6vw; width: 90%; margin: 6vh auto 0;">
-                        <!-- Coluna 1: Capacidade (Alinhada à direita) -->
-                        <div class="reveal-fade"
-                            style="animation-delay: 0.5s; display: flex; flex-direction: column; align-items: flex-end; text-align: right; flex: 1;">
-                            <div
-                                style="font-size: clamp(8rem, 12vw, 12rem); font-weight: 700; background: linear-gradient(180deg, #FFFFFF 0%, #6E6E73 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; line-height: 0.85; text-shadow: 0 10px 30px rgba(255,255,255,0.05);">
-                                5</div>
-                            <div
-                                style="font-size: clamp(1.8rem, 3vw, 2.5rem); color: #E5E5EA; margin-top: 1vh; font-weight: 600; letter-spacing: -0.02em;">
-                                projetos</div>
-                            <div
-                                style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: #8E8E93; margin-top: 0.5vh; text-transform: uppercase; letter-spacing: 0.1em;">
-                                Capacidade inicial de operação</div>
-
-                            <div
-                                style="margin-top: 5vh; border-right: 2px solid rgba(238,0,0,0.5); padding-right: 1.5vw;">
-                                <p
-                                    style="font-size: clamp(0.7rem, 0.9vw, 0.8rem); color: #6E6E73; margin-bottom: 1.5vh; text-transform: uppercase; letter-spacing: 0.1em;">
-                                    Cenário Conservador</p>
-                                <p
-                                    style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #E5E5EA; margin-bottom: 0.5rem; letter-spacing: 0.02em; font-weight: 500;">
-                                    2 Estudos Essenciais</p>
-                                <p
-                                    style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #A1A1A6; margin-bottom: 0.5rem; letter-spacing: 0.02em;">
-                                    2 Estudos de Expansão</p>
-                                <p
-                                    style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #6E6E73; letter-spacing: 0.02em;">
-                                    1 Estudo Corporativo</p>
+                    <div class="operation-container">
+                        <!-- Card 1: Capacidade e Receita -->
+                        <div class="operation-card reveal-fade delay-2">
+                            <div class="card-subtitle">Capacidade & Receita</div>
+                            <div class="metric-huge">5</div>
+                            <div class="card-title" style="margin-top: -1.5vh; margin-bottom: 2vh;">projetos / mês</div>
+                            
+                            <div style="margin-top: auto; width: 100%;">
+                                <div class="metric-large" style="font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 0.5vh;">R$ 24.000</div>
+                                <div style="font-size: clamp(0.85rem, 1vw, 1.05rem); color: #E5E5EA; font-weight: 500;">receita mensal estimada</div>
+                                <div style="font-size: clamp(0.75rem, 0.9vw, 0.9rem); color: #8E8E93; margin-top: 0.5vh; letter-spacing: 0.02em;">≈ R$ 288.000 / ano</div>
                             </div>
                         </div>
 
-                        <!-- Divisor -->
-                        <div class="reveal-fade"
-                            style="animation-delay: 0.5s; width: 1px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0));">
+                        <!-- Card 2: Custos Operacionais -->
+                        <div class="operation-card reveal-fade delay-3">
+                            <div class="card-subtitle">Custos de Operação</div>
+                            <div class="metric-large" style="font-size: clamp(2.5rem, 4.5vw, 4.8rem); margin-top: 2vh; margin-bottom: 1vh;">R$ 8.000</div>
+                            <div class="card-title" style="color: #8E8E93; font-weight: 500; margin-bottom: 2vh;">custos operacionais</div>
+                            
+                            <div style="width: 100%; text-align: left; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2vh; margin-top: auto;">
+                                <div style="font-size: clamp(0.75rem, 0.9vw, 0.95rem); color: #8E8E93; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1vh; font-weight: 600;">Custos considerados:</div>
+                                <ul class="cost-list">
+                                    <li>Infraestrutura</li>
+                                    <li>Ferramentas</li>
+                                    <li>Marketing inicial</li>
+                                    <li>Operação</li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!-- Coluna 2: Receita (Alinhada à esquerda) -->
-                        <div class="reveal-fade"
-                            style="animation-delay: 0.5s; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex: 1;">
-                            <div
-                                style="font-size: clamp(4rem, 6vw, 6.5rem); font-weight: 700; background: linear-gradient(180deg, #FFFFFF 0%, #6E6E73 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; line-height: 0.85; margin-top: 1.5vh; text-shadow: 0 10px 30px rgba(255,255,255,0.05);">
-                                R$ 24.000</div>
-                            <div
-                                style="font-size: clamp(1.8rem, 3vw, 2.5rem); color: #E5E5EA; margin-top: 1vh; font-weight: 600; letter-spacing: -0.02em;">
-                                mensais</div>
-                            <div
-                                style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: #8E8E93; margin-top: 0.5vh; text-transform: uppercase; letter-spacing: 0.1em;">
-                                Receita estimada</div>
-
-                            <div class="reveal-fade"
-                                style="animation-delay: 1.5s; margin-top: 5vh; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5vw;">
-                                <p
-                                    style="font-size: clamp(1.2rem, 1.8vw, 1.5rem); color: #A1A1A6; letter-spacing: -0.01em; font-weight: 300;">
-                                    ≈ R$ <span style="color: #E5E5EA; font-weight: 600;">288.000</span> / ano</p>
+                        <!-- Card 3: Resultado Operacional -->
+                        <div class="operation-card highlighted reveal-fade delay-4">
+                            <div class="card-subtitle" style="color: #FF453A;">Resultado Líquido</div>
+                            <div class="metric-large" style="font-size: clamp(2.5rem, 4.5vw, 4.8rem); margin-top: 2vh; margin-bottom: 1vh; color: #FF453A;">R$ 16.000</div>
+                            <div class="card-title" style="color: #E5E5EA; font-weight: 600; margin-bottom: 2vh;">resultado operacional</div>
+                            
+                            <div style="margin-top: auto; width: 100%; border-top: 1px solid rgba(238, 0, 0, 0.15); padding-top: 2.5vh;">
+                                <div style="font-size: clamp(1.2rem, 1.6vw, 1.8rem); color: #FFFFFF; font-weight: 600; text-shadow: 0 0 10px rgba(238,0,0,0.3);">66.7%</div>
+                                <div style="font-size: clamp(0.85rem, 1vw, 1.05rem); color: #A1A1A6; margin-top: 0.5vh;">margem operacional</div>
+                                <p style="font-size: clamp(0.75rem, 0.9vw, 0.85rem); color: #6E6E73; margin-top: 2.5vh; line-height: 1.4;">
+                                    Cenário de operação inicial estruturado para estabilidade e margem saudável.
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Rodapé Simulação -->
-                    <div class="reveal-fade" style="animation-delay: 2.5s; margin-top: 8vh; width: 100%;">
-                        <p style="font-size: clamp(0.75rem, 1vw, 0.9rem); color: #4A4A4F; letter-spacing: 0.02em;">
-                            Simulação de operação inicial baseada na capacidade de atendimento da Urbanis.</p>
+                    <div class="reveal-fade" style="animation-delay: 1.0s; margin-top: 6vh; width: 100%;">
+                        <p style="font-size: clamp(0.75rem, 1vw, 0.9rem); color: #6E6E73; max-width: 800px; margin: 0 auto; line-height: 1.4; letter-spacing: 0.01em;">
+                            Simulação conservadora de operação inicial, considerando capacidade de atendimento e custos operacionais estimados.
+                        </p>
                     </div>
                 </div>
             </section>
