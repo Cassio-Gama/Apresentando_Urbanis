@@ -3005,7 +3005,8 @@ body.teleprompter-active .teleprompter-nav {
     text-decoration: none;
     transition: all 0.4s var(--easing);
     backdrop-filter: blur(10px);
-    pointer-events: auto; /* IMPORTANTE: anula pointer-events: none do scene-content */
+    pointer-events: auto;
+    /* IMPORTANTE: anula pointer-events: none do scene-content */
     box-shadow: 0 4px 15px rgba(196, 18, 48, 0.15);
     margin-top: 2vh;
 }
