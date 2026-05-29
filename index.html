@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,28 @@
     <link rel="stylesheet" href="./style.css">
     <meta name="description" content="Apresentação premium da Urbanis">
 </head>
+
 <body>
     <!-- Tela Inicial (Lobby) -->
     <div id="intro-screen" class="intro-screen">
-        
+
         <!-- CAMADAS CINEMATOGRÁFICAS URBANIS -->
         <div class="urbanis-city-layers">
-            
+
             <!-- Camada 1: Fundo -->
             <div class="city-layer layer-bg"></div>
 
             <!-- Camada 6: Mapa Abstrato -->
             <div class="city-layer layer-map">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="city-svg">
-                    <polygon points="10,20 40,10 60,30 30,50" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.2"/>
-                    <polygon points="60,30 90,20 80,60 50,70" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.05)" stroke-width="0.2"/>
-                    <polygon points="30,50 50,70 40,90 15,80" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="0.2"/>
-                    <polygon points="50,70 80,60 95,85 60,95" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.2"/>
+                    <polygon points="10,20 40,10 60,30 30,50" fill="rgba(255,255,255,0.02)"
+                        stroke="rgba(255,255,255,0.05)" stroke-width="0.2" />
+                    <polygon points="60,30 90,20 80,60 50,70" fill="rgba(255,255,255,0.015)"
+                        stroke="rgba(255,255,255,0.05)" stroke-width="0.2" />
+                    <polygon points="30,50 50,70 40,90 15,80" fill="rgba(255,255,255,0.03)"
+                        stroke="rgba(255,255,255,0.05)" stroke-width="0.2" />
+                    <polygon points="50,70 80,60 95,85 60,95" fill="rgba(255,255,255,0.02)"
+                        stroke="rgba(255,255,255,0.05)" stroke-width="0.2" />
                 </svg>
             </div>
 
@@ -71,47 +77,30 @@
             <!-- Camada de Vidro/Blur para Profundidade -->
             <div class="city-glass-overlay"></div>
         </div>
-        
+
         <!-- TEXTO E LOGO (Canto Inferior Esquerdo) -->
         <div class="intro-content text-left absolute-bottom-left">
             <div class="text-protection-gradient"></div>
-            
-            <img src="./assets/urbanis-logo.png" alt="Urbanis" class="intro-logo intro-reveal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <h1 class="monumental intro-reveal fallback-logo" style="display:none; font-size: clamp(3rem, 6vw, 5rem);">Urbanis<span class="glow-red">.</span></h1>
-            
-            <h2 class="subtitle intro-reveal delay-1 mt-medium shadow-text" style="font-size: clamp(1.2rem, 2.5vw, 2rem); margin-left: 0;">Inteligência aplicada à expansão comercial.</h2>
-            <p class="small-text intro-reveal delay-2" style="margin-top: 1.5vh; opacity: 0.6;">Dados públicos transformados em decisões estratégicas de localização.</p>
-            
+
+            <img src="./assets/urbanis-logo.png" alt="Urbanis" class="intro-logo intro-reveal"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <h1 class="monumental intro-reveal fallback-logo" style="display:none; font-size: clamp(3rem, 6vw, 5rem);">
+                Urbanis<span class="glow-red">.</span></h1>
+
+            <h2 class="subtitle intro-reveal delay-1 mt-medium shadow-text"
+                style="font-size: clamp(1.2rem, 2.5vw, 2rem); margin-left: 0;">Inteligência aplicada à expansão
+                comercial.</h2>
+            <p class="small-text intro-reveal delay-2" style="margin-top: 1.5vh; opacity: 0.6;">Dados públicos
+                transformados em decisões estratégicas de localização.</p>
+
             <div class="intro-actions intro-reveal delay-3 mt-large justify-start">
-                <button id="btn-start" class="btn-premium">Iniciar</button>
+                <button id="btn-start" class="btn-premium">Apresentar</button>
+                <button id="btn-notes" class="btn-secondary">Ver roteiro</button>
             </div>
         </div>
-        <!-- Botão de Instruções -->
-        <button id="btn-instructions" class="btn-icon absolute-top-right intro-reveal delay-3" aria-label="Instruções">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-        </button>
     </div>
 
-    <!-- Modal de Instruções (Cheat Sheet) -->
-    <div id="instructions-modal" class="instructions-overlay hidden">
-        <div class="instructions-content">
-            <button id="btn-close-instructions" class="btn-close">✕</button>
-            <h2 class="headline" style="font-size: 2rem;">Controles</h2>
-            <p class="small-text" style="opacity: 0.5; margin-bottom: 2rem;">Guia do Apresentador</p>
-            
-            <div class="hotkeys-grid">
-                <div class="hotkey-item"><kbd>→</kbd> <kbd>←</kbd> <span>Avançar ou Voltar Slides</span></div>
-                <div class="hotkey-item"><kbd>F</kbd> <span>Tela Cheia (Fullscreen)</span></div>
-                <div class="hotkey-item"><kbd>T</kbd> <span>Pausar / Retomar Temporizador</span></div>
-                <div class="hotkey-item"><kbd>Shift</kbd> + <kbd>T</kbd> <span>Zerar Tempo Total</span></div>
-                <div class="hotkey-item"><kbd>R</kbd> <span>Voltar para o Lobby (Pausar)</span></div>
-                <div class="hotkey-item"><kbd>Shift</kbd> + <kbd>R</kbd> <span>Reiniciar Totalmente (Zerar)</span></div>
-                <div class="hotkey-item"><kbd>E</kbd> <span>Modo Ensaio (Rehearsal Panel)</span></div>
-                <div class="hotkey-item"><kbd>S</kbd> <span>Ocultar / Mostrar Ilha Dinâmica</span></div>
-                <div class="hotkey-item"><kbd>N</kbd> <span>Abrir Notas de Fala Privadas</span></div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Cinematic Loader (The Last of Us Style) -->
     <div id="cinematic-loader" class="cinematic-loader">
@@ -120,325 +109,381 @@
 
     <!-- Wrapper Principal da Apresentação -->
     <div id="presentation-wrapper" class="presentation-wrapper">
-        <!-- Barra de progresso minimalista -->
-        <div class="progress-track">
-            <div class="progress-fill"></div>
-        </div>
 
-    <!-- Container da Apresentação -->
-    <div class="presentation-container">
-        
-        <!-- SLIDE 1 — INTRODUÇÃO -->
-        <section class="scene scene-center" data-speaker="Luiz" data-role="Introdução" data-duration="15" data-notes="Boa noite, pessoal. Nós somos a Urbanis, uma startup voltada para inteligência aplicada à expansão comercial. O projeto surgiu a partir da dificuldade que muitas empresas ainda possuem para validar, de forma mais estratégica, onde abrir novas operações.">
-            <!-- Background Cinematográfico -->
-            <div class="cinematic-bg">
-                <img src="./assets/urbanis-map-dark.jpg" alt="Mapa Urbano Escuro" class="bg-img ken-burns">
-                <div class="bg-overlay"></div>
-            </div>
-            
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-2">01. Introdução</div>
-                <h1 class="monumental reveal-text fallback-logo">Urbanis<span class="glow-red">.</span></h1>
-                <h2 class="subtitle reveal-text delay-1">Inteligência aplicada à expansão comercial.</h2>
-                <p class="small-text reveal-fade delay-2">Dados públicos para decisões mais estratégicas de localização.</p>
-            </div>
-        </section>
+        <!-- Container da Apresentação -->
+        <div class="presentation-container">
 
-        <!-- SLIDE 2 — PROBLEMA -->
-        <section class="scene scene-center" data-speaker="Pedro" data-role="Problema" data-duration="25" data-notes="Segundo dados do Sebrae, uma parcela significativa das empresas encerra suas atividades nos primeiros anos de operação, e falhas de planejamento estão entre os fatores mais recorrentes. Hoje, analisar uma região comercialmente exige cruzar diferentes informações, muitas vezes espalhadas em bases públicas separadas e difíceis de interpretar em conjunto. Além disso, diferentes modelos de negócio possuem necessidades completamente diferentes. Uma academia premium, por exemplo, procura um comportamento urbano diferente de uma farmácia popular. Mesmo assim, muitas análises ainda são feitas de maneira subjetiva, genérica ou pouco padronizada.">
-            <div class="cinematic-bg">
-                <img src="./assets/sp-aerea-escura.jpg" alt="São Paulo Aérea" class="bg-img parallax-slow">
-                <div class="bg-overlay-heavy"></div>
-            </div>
-            
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-1">02. O Problema</div>
-                <h1 class="headline reveal-text">Empresas ainda escolhem<br>localização <span class="text-red glow-red">no escuro</span>.</h1>
-                <h2 class="subtitle reveal-fade delay-1">Decisões críticas continuam baseadas em intuição, referências informais ou análises fragmentadas.</h2>
-            </div>
-        </section>
-
-        <!-- SLIDE 3 — CONTEXTO DE DECISÃO (SPLIT SCREEN) -->
-        <section class="scene scene-split" data-speaker="Pedro" data-role="Problema" data-duration="15" data-notes="Diferentes modelos de negócio possuem necessidades distintas. Uma operação premium pode depender mais de centralidade comercial e menor vulnerabilidade social. Já uma operação popular pode ter maior aderência em regiões com maior densidade e fluxo residencial.">
-            <div class="split-bg left-bg reveal-slide-right">
-                <img src="./assets/perfil-premium.jpg" alt="Região Premium" class="bg-img ken-burns">
-                <div class="bg-overlay"></div>
-                <h3 class="split-title">Premium.</h3>
-            </div>
-            
-            <div class="split-bg right-bg reveal-slide-left delay-1">
-                <img src="./assets/perfil-popular.jpg" alt="Região Popular" class="bg-img ken-burns-reverse">
-                <div class="bg-overlay"></div>
-                <h3 class="split-title">Popular.</h3>
-            </div>
-
-            <div class="scene-content text-center" style="z-index: 10;">
-                <div class="chapter-marker reveal-fade delay-2">03. Contexto</div>
-                <h1 class="headline reveal-text shadow-text">Cada operação procura<br>um território diferente.</h1>
-                <h2 class="subtitle reveal-fade delay-2 shadow-text">Uma academia premium não analisa a cidade da mesma forma que uma farmácia popular.</h2>
-            </div>
-        </section>
-
-        <!-- SLIDE 4 — SOLUÇÃO -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Solução" data-duration="20" data-notes="A nossa proposta com a Urbanis é centralizar a inteligência territorial em uma única plataforma. Transformamos dados abertos — como setores censitários, infraestrutura urbana e polos comerciais — em índices comparáveis e fáceis de interpretar, para que o usuário possa focar no planejamento, e não na coleta de informações.">
-            <div class="cinematic-bg reveal-scale-up delay-1">
-                <img src="./assets/hero.png" alt="Dashboard Reveal" class="bg-img cinematic-blur-focus premium-product-frame">
-                <div class="bg-overlay-gradient"></div>
-            </div>
-
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-2">04. A Plataforma</div>
-                <h1 class="monumental reveal-text shadow-text">Urbanis<span class="glow-red">.</span></h1>
-                <h2 class="subtitle reveal-text delay-1 shadow-text">Uma plataforma para transformar território em decisão.</h2>
-            </div>
-        </section>
-
-        <!-- SLIDE 5 — INDICADORES -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Indicadores" data-duration="15" data-notes="Esses indicadores permitem que o sistema compare os distritos de forma mais estruturada, considerando dimensões importantes para decisões de localização.">
-            <div class="cinematic-bg">
-                <img src="./assets/screenshots/indicadores-reais.jpg" alt="Gráficos de Indicadores" class="bg-img parallax-slow blur-heavy">
-                <div class="bg-overlay-heavy"></div>
-            </div>
-
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-1">05. Dimensões</div>
-                <h1 class="headline reveal-text shadow-text">96 distritos.<br><span class="text-gray">6 dimensões territoriais.</span></h1>
-                <div class="indicator-grid mt-large">
-                    <div class="indicator-card reveal-slide delay-1">Densidade populacional</div>
-                    <div class="indicator-card reveal-slide delay-2">Mobilidade urbana</div>
-                    <div class="indicator-card reveal-slide delay-3">Fluxo de metrô</div>
-                    <div class="indicator-card reveal-slide delay-4">Criminalidade</div>
-                    <div class="indicator-card reveal-slide delay-5">Infraestrutura urbana</div>
-                    <div class="indicator-card reveal-slide delay-6">IPVS</div>
+            <!-- SLIDE 02 — CAPA -->
+            <section class="scene scene-center" data-speaker="Luiz" data-role="Capa" data-duration="15"
+                data-notes="Boa noite, pessoal. Nós somos a Urbanis, uma startup voltada para inteligência aplicada à expansão comercial. O projeto surgiu da dificuldade que muitas empresas ainda possuem para validar, de forma mais estratégica, onde abrir novas operações.">
+                <div class="cinematic-bg">
+                    <!-- Placeholder: Marginal Pinheiros à noite / Faria Lima desfocado -->
+                    <div class="bg-img" style="background: url('./assets/marginal-noite.jpg') center/cover; filter: blur(5px);"></div>
+                    <div class="noise-overlay"></div>
+                    <div class="bg-overlay" style="background: rgba(0,0,0,0.6);"></div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SLIDE 6 — URBANSCORE -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="UrbanScore" data-duration="20" data-notes="Esses dados são tratados previamente em Python e alimentam o UrbanScore, nosso índice de aderência para cada distrito. Na prática, o sistema aplica pesos específicos para cada perfil operacional. Então, uma operação premium tende a priorizar regiões com maior centralidade comercial e menor vulnerabilidade social, enquanto operações populares possuem maior aderência em regiões com maior densidade populacional e fluxo residencial.">
-            <div class="cinematic-bg reveal-scale-up">
-                <img src="./assets/screenshots/urbanscore-map-giant.jpg" alt="Mapa UrbanScore" class="bg-img ken-burns premium-product-frame">
-                <div class="heat-overlay"></div>
-            </div>
+                <div class="scene-content text-center" style="z-index: 5;">
+                    <img src="./assets/urbanis-logo.png" alt="Urbanis Logo" class="logo-hero reveal-fade delay-1"
+                        style="width: clamp(300px, 25vw, 450px); margin: 0 auto; filter: drop-shadow(0 0 30px rgba(238,0,0,0.3));">
+                </div>
+            </section>
 
-            <div class="scene-content text-center" style="margin-bottom: 25vh;">
-                <div class="chapter-marker reveal-fade delay-1">06. UrbanScore</div>
-                <h1 class="monumental reveal-text shadow-heavy">UrbanScore<span class="text-red">.</span></h1>
-                <h2 class="subtitle reveal-text delay-1 shadow-heavy">Índice de aderência territorial por distrito.</h2>
-            </div>
-        </section>
+            <!-- SLIDE 03 — PROBLEMA -->
+            <section class="scene scene-center" data-speaker="Pedro" data-role="Problema" data-duration="20"
+                data-notes="Segundo dados do Sebrae, uma parcela significativa das empresas encerra suas atividades nos primeiros anos de operação. Falhas de planejamento estão entre os fatores mais recorrentes. Escolher uma localização envolve investimento, operação e estratégia, mas muitas decisões ainda são tomadas com elevado grau de incerteza.">
+                <div class="cinematic-bg">
+                    <!-- Placeholder: Mapa escuro, linhas urbanas, regiões destacadas -->
+                    <div class="abstract-map-bg" style="opacity: 0.15; filter: none; background-image: url('./assets/mapa-linhas-urbanas.jpg');"></div>
+                    <div class="bg-overlay-heavy" style="background: rgba(0,0,0,0.85);"></div>
+                </div>
 
-        <!-- SLIDE 7 — METODOLOGIA -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Metodologia" data-duration="10" data-notes="O objetivo não é prever faturamento, mas apoiar decisões de expansão através de uma análise mais organizada, comparável e visual.">
-            <div class="cinematic-bg">
-                <img src="./assets/screenshots/comparacao-metodologia.jpg" alt="Metodologia e Pesos" class="bg-img parallax-slow blur-bg">
-                <div class="bg-overlay-heavy"></div>
-            </div>
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">03. Problema</div>
+                    <h2 class="subtitle reveal-text delay-1" style="color: #A1A1A6; margin-bottom: 0; font-size: clamp(1rem, 2vw, 1.5rem);">Escolher onde expandir ainda é uma decisão baseada em</h2>
+                    <h1 class="headline reveal-text shadow-text" style="font-size: clamp(3rem, 8vw, 8rem); line-height: 0.9; margin-top: 2vh; letter-spacing: -0.02em;">
+                        <span class="text-red glow-extreme" style="display:inline-block;">incerteza.</span>
+                    </h1>
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Planejamento, investimento e localização.</p>
+                </div>
+            </section>
 
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-1">07. Metodologia</div>
-                <h1 class="headline reveal-text shadow-text">Pesos diferentes.<br>Decisões diferentes.</h1>
-                <h2 class="subtitle reveal-fade delay-1 shadow-text">O mesmo território pode ter leituras diferentes para negócios diferentes.</h2>
-            </div>
-        </section>
-
-        <!-- SLIDE 8 — DEMONSTRAÇÃO DA PLATAFORMA (VÍDEO DEMO WWDC) -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Demo" data-duration="25" data-notes="Aqui nós temos a plataforma funcionando. Primeiro, cadastramos o estudo selecionando o segmento do negócio e o perfil da operação. Depois disso, o sistema recalcula automaticamente o UrbanScore dos distritos em tempo real.">
-            
-            <div class="hero-fullscreen reveal-scale-up">
-                <!-- VÍDEO CINEMATOGRÁFICO PREMIUM -->
-                <div class="premium-product-frame video-wrapper cinematic-pan-video">
-                    <video src="./assets/screenshots/demo-cinematografica.mp4" autoplay loop muted playsinline class="hero-video-fullscreen"></video>
-                    <!-- Fallback / Placeholder do Vídeo -->
-                    <div class="video-placeholder">
-                        <span class="video-icon">▶</span>
-                        <p>Demo Cinematográfica Urbanis</p>
-                        <small>Adicione assets/screenshots/demo-cinematografica.mp4</small>
+            <!-- SLIDE 04 — CONTEXTO -->
+            <section class="scene scene-center" data-speaker="Pedro" data-role="Contexto" data-duration="15"
+                data-notes="Hoje, analisar uma região comercialmente exige cruzar diferentes informações espalhadas em bases públicas separadas. Além disso, diferentes modelos de negócio possuem necessidades completamente distintas. Uma academia premium procura um comportamento urbano diferente de uma farmácia popular. Mesmo assim, muitas análises ainda são feitas de forma subjetiva ou pouco padronizada.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                    <div class="floating-metrics-container reveal-fade delay-1">
+                        <div class="floating-metric" style="top: 20%; left: 15%; animation-delay: 0s;">IBGE</div>
+                        <div class="floating-metric" style="top: 60%; left: 10%; animation-delay: 1.5s;">SEADE</div>
+                        <div class="floating-metric" style="top: 30%; right: 20%; animation-delay: 0.8s;">IPVS</div>
+                        <div class="floating-metric" style="top: 70%; right: 15%; animation-delay: 2.1s;">Mobilidade</div>
+                        <div class="floating-metric" style="top: 80%; left: 40%; animation-delay: 0.4s;">Criminalidade</div>
+                        <div class="floating-metric" style="top: 15%; left: 50%; animation-delay: 1.2s;">Metrô</div>
+                        <div class="floating-metric" style="top: 45%; right: 5%; animation-delay: 2.5s;">Demografia</div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="scene-content text-center absolute-bottom reveal-fade delay-2" style="z-index: 15;">
-                <div class="chapter-marker reveal-fade delay-1">08. Demonstração</div>
-                <h1 class="headline shadow-heavy" style="font-size: clamp(2rem, 4vw, 3.5rem);">A plataforma funcionando.</h1>
-            </div>
-        </section>
 
-        <!-- SLIDE 9 — MAPA E RANKING -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Mapa e Ranking" data-duration="20" data-notes="Na visualização em mapa da plataforma, o usuário consegue ter uma visão clara e hierárquica das regiões. O gradiente de cores (heatmap) facilita a identificação rápida das áreas que possuem maior ou menor aderência ao indicador selecionado.">
-            
-            <div class="hero-fullscreen reveal-scale-up">
-                <img src="./assets/hero.png" alt="Mapa e Ranking Integrados" class="hero-image-fullscreen cinematic-pan premium-product-frame">
-            </div>
-
-            <div class="scene-content text-left absolute-left reveal-slide-right delay-2">
-                <div class="chapter-marker reveal-fade delay-1">09. Interface</div>
-                <h1 class="headline monumental-line shadow-heavy">Mapa.<br>Ranking.<br>Indicadores.</h1>
-            </div>
-        </section>
-
-        <!-- SLIDE 10 — ARQUITETURA -->
-        <section class="scene scene-center" data-speaker="Henrique" data-role="Arquitetura" data-duration="20" data-notes="Sobre a nossa base técnica: Optamos por utilizar o QGIS para processar inicialmente a malha geográfica. No banco de dados, usamos PostgreSQL estruturado em Docker. A API do back-end é desenvolvida em Node.js. No front-end, construímos a interface com React e usamos a biblioteca Leaflet para a renderização interativa do mapa.">
-            <div class="cinematic-bg">
-                <div class="tech-grid-bg"></div>
-                <div class="bg-overlay-heavy"></div>
-            </div>
-
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-1">10. Arquitetura</div>
-                <h1 class="headline reveal-text">Arquitetura do MVP.</h1>
-                
-                <div class="tech-stack reveal-fade delay-1">
-                    <span class="tech-item">React + TypeScript</span>
-                    <span class="tech-divider">/</span>
-                    <span class="tech-item">Zustand</span>
-                    <span class="tech-divider">/</span>
-                    <span class="tech-item glow-red">Supabase + PostgreSQL</span>
-                    <span class="tech-divider">/</span>
-                    <span class="tech-item">Python</span>
-                    <span class="tech-divider">/</span>
-                    <span class="tech-item">Vercel</span>
+                <div class="scene-content text-center" style="z-index: 20;">
+                    <div class="chapter-marker reveal-fade delay-1">04. Contexto</div>
+                    <h1 class="headline reveal-text shadow-text" style="font-size: clamp(2.5rem, 5vw, 4rem);">
+                        Dados existem.<br>Mas estão fragmentados.
+                    </h1>
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Informações dispersas dificultam decisões estratégicas.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SLIDE 11 — INDICADORES ESPECÍFICOS (Demo Split) -->
-        <section class="scene scene-split" data-speaker="Renan" data-role="Detalhamento" data-duration="15" data-notes="Ao selecionar um setor específico, a plataforma exibe um card detalhado com os indicadores daquela região: População Residente, Densidade Demográfica, Faixa de Idade predominante e outras métricas relevantes extraídas do Censo, ajudando na validação do perfil do local.">
-            <div class="split-bg left-bg reveal-slide-right">
-                <img src="./assets/perfil-premium.jpg" alt="Região Premium" class="bg-img ken-burns">
-                <div class="bg-overlay"></div>
-                <div class="split-title" style="opacity: 0.8; font-weight: 600; text-shadow: 0 4px 20px rgba(0,0,0,0.9); background: rgba(0,0,0,0.5); padding: 0.5rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">Premium</div>
-            </div>
-            
-            <div class="split-bg right-bg reveal-slide-left delay-1">
-                <img src="./assets/perfil-popular.jpg" alt="Região Popular" class="bg-img ken-burns-reverse">
-                <div class="bg-overlay"></div>
-                <div class="split-title" style="opacity: 0.8; font-weight: 600; text-shadow: 0 4px 20px rgba(0,0,0,0.9); background: rgba(0,0,0,0.5); padding: 0.5rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">Popular</div>
-            </div>
-
-            <div class="scene-content text-center" style="z-index: 10;">
-                <div class="chapter-marker reveal-fade delay-2">11. Detalhamento</div>
-                <h1 class="headline reveal-text shadow-text">Validação por setor.</h1>
-                <h2 class="subtitle reveal-fade delay-2 shadow-text">Dados demográficos granulares para decisões precisas.</h2>
-            </div>
-        </section>
-
-        <!-- SLIDE 12 — PÚBLICO-ALVO E MODELO DE NEGÓCIO -->
-        <section class="scene scene-center" data-speaker="Cássio" data-role="Modelo de Negócio" data-duration="20" data-notes="O público-alvo do Urbanis são empresas que desejam validar novas regiões antes de investir em operações físicas. Nosso modelo de negócio é baseado na prestação de consultoria estratégica apoiada pela plataforma.">
-            <div class="cinematic-bg">
-                <img src="./assets/consultoria-premium.jpg" alt="Consultoria Premium" class="bg-img parallax-slow blur-bg">
-                <div class="bg-overlay-heavy"></div>
-            </div>
-
-            <div class="scene-content text-center">
-                <div class="chapter-marker reveal-fade delay-1">12. Modelo de Negócio</div>
-                <h1 class="headline reveal-text shadow-text" style="font-size: clamp(2rem, 5vw, 4.5rem);">Consultoria estratégica<br>apoiada por software.</h1>
-                <h2 class="subtitle reveal-fade delay-1 shadow-text">Estudos de expansão e análise de localização para empresas.</h2>
-                
-                <div class="editorial-words mt-large">
-                    <span class="word reveal-slide delay-2">Empresas.</span>
-                    <span class="word reveal-slide delay-3">Franquias.</span>
-                    <span class="word reveal-slide delay-4">Investidores.</span>
-                    <span class="word reveal-slide delay-5">Expansão.</span>
+            <!-- SLIDE 05 — SOLUÇÃO -->
+            <section class="scene scene-center" data-speaker="Renan" data-role="Solução" data-duration="15"
+                data-notes="Foi a partir desse cenário que desenvolvemos a Urbanis. E para transformar dados públicos em inteligência territorial, criamos o UrbanScore. O UrbanScore é o índice proprietário da Urbanis e representa a base da nossa metodologia de análise.">
+                <div class="cinematic-bg reveal-fade delay-1">
+                    <img src="./assets/hero.png" alt="Dashboard Reveal"
+                        class="bg-img bg-zoom-continuous premium-product-frame" style="opacity: 0.5;">
+                    <div class="bg-overlay-gradient"></div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SLIDE 13 — ROADMAP -->
-        <section class="scene scene-center" data-speaker="Renan" data-role="Roadmap" data-duration="10" data-notes="Como próximos passos, planejamos integrar novos indicadores, como preço médio do metro quadrado comercial e dados de renda média. Também buscamos automatizar a atualização das bases públicas e expandir a análise para outras cidades.">
-            <div class="cinematic-bg">
-                <div class="bg-overlay-heavy"></div>
-            </div>
+                <div class="scene-content text-center" style="z-index: 10;">
+                    <div class="chapter-marker reveal-fade delay-1">05. Solução</div>
+                    <h1 class="headline reveal-text shadow-text" style="font-size: clamp(2rem, 4vw, 3.5rem);">
+                        Transformando dados públicos em inteligência territorial.</h1>
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Uma única plataforma para apoiar decisões de expansão.</p>
+                </div>
+            </section>
 
-            <div class="scene-content text-left">
-                <div class="chapter-marker reveal-fade delay-1">13. Roadmap</div>
-                <h1 class="headline reveal-text text-center mb-large">Próximos passos.</h1>
-                
-                <div class="timeline-cinematic reveal-slide-right delay-1">
-                    <div class="time-node">
-                        <div class="node-dot glow-red"></div>
-                        <h3>Novos indicadores.</h3>
+            <!-- SLIDE 06 — INDICADORES -->
+            <section class="scene scene-center" data-speaker="Renan" data-role="Indicadores" data-duration="15"
+                data-notes="Hoje trabalhamos com indicadores como densidade populacional, mobilidade urbana, infraestrutura, criminalidade e IPVS. Esses indicadores permitem comparar diferentes distritos de forma mais estruturada e consistente.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                </div>
+
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">06. Indicadores</div>
+                    <div class="bento-container reveal-fade delay-1">
+                        <div class="bento-box" style="animation-delay: 0.1s;">Densidade</div>
+                        <div class="bento-box" style="animation-delay: 0.2s;">Mobilidade</div>
+                        <div class="bento-box" style="animation-delay: 0.3s;">Infraestrutura</div>
+                        <div class="bento-box" style="animation-delay: 0.4s;">IPVS</div>
+                        <div class="bento-box" style="animation-delay: 0.5s;">Criminalidade</div>
                     </div>
-                    <div class="time-node">
-                        <div class="node-dot glow-red"></div>
-                        <h3>Atualização automática.</h3>
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 5vh; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Indicadores que ajudam a compreender o potencial de cada região.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 07 — URBANSCORE -->
+            <section class="scene scene-center" data-speaker="Renan" data-role="UrbanScore" data-duration="15"
+                data-notes="Esses dados são tratados previamente e alimentam o UrbanScore. A partir deles, cada distrito recebe um índice de aderência que varia de acordo com o perfil operacional analisado. Isso permite comparar regiões de forma objetiva e transparente.">
+                <div class="cinematic-bg reveal-scale-up">
+                    <img src="./assets/screenshots/urbanscore-map-giant.jpg" alt="Mapa UrbanScore"
+                        class="bg-img ken-burns premium-product-frame" style="opacity: 0.15;">
+                    <div class="heat-overlay"></div>
+                </div>
+
+                <div class="scene-content text-center" style="margin-bottom: 5vh;">
+                    <div class="chapter-marker reveal-fade delay-1">07. UrbanScore</div>
+                    <div class="colossal-flex reveal-scale-up delay-2">
+                        <div class="colossal-number">87</div>
+                        <div class="colossal-label">Índice<br>de<br>Aderência</div>
                     </div>
-                    <div class="time-node">
-                        <div class="node-dot glow-red"></div>
-                        <h3>Expansão territorial.</h3>
+                    <p class="subtitle mt-medium reveal-fade delay-3" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">UrbanScore — comparando distritos de forma objetiva.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 08 — DEMONSTRAÇÃO -->
+            <section class="scene scene-center" data-speaker="Renan" data-role="Demo" data-duration="30"
+                data-notes="Aqui temos a plataforma funcionando. Primeiro selecionamos o segmento do negócio e o perfil operacional. A partir dessas escolhas, o UrbanScore é recalculado automaticamente para refletir as características daquela operação. Ou seja, cada negócio passa a enxergar a cidade através dos critérios mais relevantes para sua realidade.">
+
+                <div class="hero-fullscreen reveal-scale-up" style="align-items: flex-start; padding-top: 6vh;">
+                    <!-- VÍDEO CINEMATOGRÁFICO PREMIUM -->
+                    <div class="premium-product-frame video-wrapper cinematic-pan-video">
+                        <video src="./assets/urbanis_demo.mp4" autoplay loop muted playsinline
+                            class="hero-video-fullscreen"></video>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SLIDE 14 — ENCERRAMENTO -->
-        <section class="scene scene-center bg-pitch-black" data-speaker="Luiz" data-role="Encerramento" data-duration="10" data-notes="E com isso, queremos transformar informações públicas, que já estão disponíveis, em decisões de alto impacto para quem quer expandir sua operação. Muito obrigado!">
-            <div class="cinematic-bg">
-                <img src="./assets/urbanis-map-dark.jpg" alt="Mapa Urbano Vermelho" class="bg-img ken-burns" style="opacity: 0.15;">
-                <div class="bg-overlay"></div>
-            </div>
+                <div class="scene-content text-center absolute-bottom reveal-fade delay-2" style="z-index: 15; bottom: 4vh; width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">08. Demonstração</div>
+                    <h1 class="headline shadow-heavy" style="font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1;">Personalizado para cada operação.</h1>
+                    <p class="subtitle shadow-heavy" style="font-size: clamp(1.1rem, 1.8vw, 1.5rem); margin-top: 1vh; opacity: 0.9; color: #F5F5F7;">Porque cada negócio enxerga a cidade de uma forma diferente.</p>
+                    <p class="subtitle shadow-heavy mt-medium reveal-fade delay-3" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Segmento + Perfil Operacional = UrbanScore Personalizado</p>
+                </div>
+            </section>
 
-                <div class="chapter-marker reveal-fade delay-1">13. Encerramento</div>
-                <img src="./assets/urbanis-logo.png" alt="Urbanis" class="logo-hero reveal-text delay-1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <h1 class="monumental reveal-text delay-1 fallback-logo" style="display:none;">Urbanis<span class="glow-red">.</span></h1>
+            <!-- SLIDE 09 — MAPA + RANKING -->
+            <section class="scene scene-center" data-speaker="Renan" data-role="Mapa + Ranking" data-duration="20"
+                data-notes="No mapa conseguimos visualizar os distritos com maior aderência através da intensidade das cores. Ao lado temos um ranking que complementa essa análise e ajuda a comparar diferentes regiões. Isso torna a tomada de decisão mais visual, transparente e fácil de interpretar.">
                 
-                <h2 class="subtitle reveal-fade delay-2 mt-medium">Informação pública transformada em decisões mais inteligentes.</h2>
-                <p class="small-text reveal-fade delay-3">Menos subjetividade. Mais clareza. Mais estratégia.</p>
-            </div>
-        </section>
+                <div class="hero-fullscreen reveal-scale-up">
+                    <img src="./assets/hero.png" alt="Mapa e Ranking Integrados"
+                        class="hero-image-fullscreen bg-zoom-continuous premium-product-frame" style="object-fit: cover; opacity: 1;">
+                </div>
 
-    </div>
+                <div class="scene-content text-left absolute-bottom reveal-slide-right delay-2" style="bottom: 4vh; left: 4vw; z-index: 20;">
+                    <div class="glass-pill" style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: 1.5rem 2.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="chapter-marker reveal-fade delay-1" style="text-align: left; margin-bottom: 0.5rem; font-size: 0.8rem;">09. Mapa + Ranking</div>
+                        <h1 class="headline shadow-heavy" style="font-size: clamp(1.2rem, 2vw, 1.8rem); line-height: 1.2; margin: 0; color: #F5F5F7; font-weight: 400;">
+                            <strong style="color: #fff; font-weight: 600;">96 distritos.</strong><br>Uma única análise.
+                        </h1>
+                        <p class="subtitle mt-small" style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #E5E5EA; margin-top: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase;">Visualização territorial com ranking de aderência.</p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Interface Superior (HUD Premium) -->
-    <div id="dynamic-island" class="dynamic-island hidden">
-        <div class="island-content compact">
-            <span id="island-speaker-name" class="island-speaker">Urbanis</span>
-            <span id="island-slide-time" class="island-slide-time">(0:00)</span>
-            <span id="island-global-time" class="island-global-time">05:00</span>
-        </div>
-        <div class="island-bar-track">
-            <div class="island-bar-fill" id="island-bar-fill"></div>
-        </div>
-    </div>
-    
-    <!-- Painel Modo Ensaio (Rehearsal Mode) -->
-    <div id="rehearsal-panel" class="rehearsal-panel hidden">
-        <div class="rehearsal-header">MODO ENSAIO</div>
-        <div class="rehearsal-grid">
-            <div class="r-col">
-                <span class="r-label">TEMPO TOTAL</span>
-                <span class="r-val" id="r-total-time">00:00</span>
-            </div>
-            <div class="r-col">
-                <span class="r-label">DELTA RITMO</span>
-                <span class="r-val pace-comfortable" id="r-delta-time">0s</span>
-            </div>
-            <div class="r-col">
-                <span class="r-label">SLIDE ATUAL</span>
-                <span class="r-val" id="r-slide-current">0 / 0</span>
-            </div>
-        </div>
-        <div class="rehearsal-footer">
-            <span class="r-label">PRÓXIMO:</span> <span id="r-next-speaker" style="color:#fff; font-weight:600;">-</span>
-        </div>
-    </div>
+            <!-- SLIDE 10 — ARQUITETURA -->
+            <section class="scene scene-center" data-speaker="Henrique" data-role="Arquitetura" data-duration="20"
+                data-notes="Para desenvolver o MVP utilizamos o QGIS no tratamento geográfico dos dados. No banco de dados utilizamos PostgreSQL. A API foi desenvolvida em Node.js e a interface construída em React com Leaflet para renderização dos mapas.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                </div>
 
-    <!-- Interface Inferior -->
-    <div class="hud hidden">
-        <button class="nav-btn prev" aria-label="Voltar">←</button>
-        <button class="nav-btn next" aria-label="Avançar">→</button>
-    </div>
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">10. Arquitetura</div>
+                    
+                    <div class="tech-stack-row reveal-fade delay-2">
+                        <span class="tech-item" style="transition-delay: 0.1s;">QGIS</span>
+                        <span class="tech-item" style="transition-delay: 0.2s;">PostgreSQL</span>
+                        <span class="tech-item" style="transition-delay: 0.3s;">Node.js</span>
+                        <span class="tech-item" style="transition-delay: 0.4s;">React</span>
+                        <span class="tech-item" style="transition-delay: 0.5s;">Leaflet</span>
+                    </div>
+                    <p class="subtitle mt-medium reveal-fade delay-3" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 5vh; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Tecnologias utilizadas na construção do MVP.</p>
+                </div>
+            </section>
 
-    <div id="notes-overlay" class="notes-overlay hidden">
-        <div class="notes-header">
-            <span class="notes-speaker">Apresentador</span>
-            <span class="notes-badge">Modo Ensaio</span>
+            <!-- SLIDE 11 — PÚBLICO-ALVO -->
+            <section class="scene scene-center" data-speaker="Cássio" data-role="Público-Alvo" data-duration="20"
+                data-notes="Mas afinal, para quem a Urbanis foi criada? Nosso público-alvo são empresas, franquias e empreendedores que precisam decidir onde abrir, expandir ou reposicionar operações físicas. Toda nova unidade exige investimento em estrutura, equipe, estoque, marketing e operação. Antes mesmo da inauguração existe uma decisão crítica: escolher a localização certa. A Urbanis existe para reduzir a incerteza presente nessa decisão.">
+                <div class="cinematic-bg">
+                    <!-- Placeholder: Fachada corporativa moderna / Rua comercial escura e premium -->
+                    <div class="bg-img bg-zoom-continuous" style="background: url('./assets/fachada-premium.jpg') center/cover; filter: blur(3px);"></div>
+                    <div class="bg-overlay-heavy" style="background: rgba(0,0,0,0.85);"></div>
+                </div>
+
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">11. Público-Alvo</div>
+                    <h1 class="headline shadow-heavy reveal-fade delay-1"
+                        style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 0.5rem; line-height: 1.2;">
+                        Empresas não abrem filiais.<br>
+                        <span class="text-red glow-extreme" style="display:inline-block; margin-top:2vh;">Empresas abrem apostas.</span>
+                    </h1>
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Empresas, franquias e empreendedores em expansão.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 12 — MODELO DE NEGÓCIO -->
+            <section class="scene scene-center" data-speaker="Cássio" data-role="Modelo de Negócio" data-duration="25"
+                data-notes="Nosso modelo de negócio é baseado na prestação de consultoria estratégica apoiada pela plataforma. Na prática, o cliente contrata a Urbanis para realizar estudos de expansão e análise territorial. A tecnologia organiza os dados e gera o UrbanScore. Já a consultoria transforma essas informações em recomendações estratégicas para apoiar decisões de localização. Para atender diferentes perfis de clientes, estruturamos três níveis de serviço. O Urbanis Essencial, voltado para pequenos empreendedores. O Urbanis Estratégico, direcionado para empresas em expansão. E o Urbanis Corporativo, pensado para organizações que realizam estudos recorrentes de mercado e expansão.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                </div>
+
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">12. Modelo de Negócio</div>
+                    
+                    <h1 class="headline shadow-heavy reveal-fade" style="font-size: clamp(4rem, 8vw, 7rem); margin-top: 2vh; animation-delay: 0.3s; letter-spacing: -0.04em;">
+                        Urban<span class="text-red glow-extreme">Score</span>
+                    </h1>
+                    <p class="subtitle reveal-fade" style="font-size: clamp(1.2rem, 2vw, 1.8rem); color: #A1A1A6; margin-top: 1vh; animation-delay: 0.6s;">Consultoria estratégica para decisões de expansão.</p>
+
+                    <div class="apple-pricing-grid" style="margin-top: 8vh;">
+                        <!-- PLANO 01 -->
+                        <div class="pricing-column">
+                            <div class="pricing-name reveal-fade" style="animation-delay: 1.0s; font-size: clamp(1.5rem, 2.5vw, 2.2rem);">Essencial</div>
+                            <div class="pricing-desc reveal-fade" style="animation-delay: 1.0s;">Para validar a próxima operação.</div>
+                            
+                            <div class="pricing-prefix reveal-fade" style="animation-delay: 1.5s;">A partir de</div>
+                            <div class="pricing-value reveal-fade" style="animation-delay: 1.5s; font-size: clamp(1.8rem, 2.5vw, 2.5rem); text-shadow: none; color: #E5E5EA;">R$ 2.500</div>
+                            
+                            <div class="pricing-footer reveal-fade" style="animation-delay: 1.5s;">Empreendedores e<br>pequenos negócios</div>
+                        </div>
+
+                        <!-- PLANO 02 -->
+                        <div class="pricing-column">
+                            <div class="pricing-name reveal-fade" style="animation-delay: 2.0s; font-size: clamp(1.5rem, 2.5vw, 2.2rem);">Estratégico</div>
+                            <div class="pricing-desc reveal-fade" style="animation-delay: 2.0s;">Para empresas em expansão.</div>
+                            
+                            <div class="pricing-prefix reveal-fade" style="animation-delay: 2.5s;">A partir de</div>
+                            <div class="pricing-value reveal-fade" style="animation-delay: 2.5s; font-size: clamp(1.8rem, 2.5vw, 2.5rem); text-shadow: none; color: #E5E5EA;">R$ 5.000</div>
+                            
+                            <div class="pricing-footer reveal-fade" style="animation-delay: 2.5s;">Franquias e redes regionais</div>
+                        </div>
+
+                        <!-- PLANO 03 -->
+                        <div class="pricing-column">
+                            <div class="pricing-name reveal-fade" style="animation-delay: 3.0s; font-size: clamp(1.5rem, 2.5vw, 2.2rem);">Empresas</div>
+                            <div class="pricing-desc reveal-fade" style="animation-delay: 3.0s;">Para decisões de grande escala.</div>
+                            
+                            <div class="pricing-prefix reveal-fade" style="animation-delay: 3.5s;">A partir de</div>
+                            <div class="pricing-value reveal-fade" style="animation-delay: 3.5s; font-size: clamp(1.8rem, 2.5vw, 2.5rem); text-shadow: none; color: #E5E5EA;">R$ 9.000</div>
+                            
+                            <div class="pricing-footer reveal-fade" style="animation-delay: 3.5s;">Grandes organizações e<br>projetos personalizados</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 13 — OPERAÇÃO INICIAL -->
+            <section class="scene scene-center" data-speaker="Cássio" data-role="Operação Inicial" data-duration="25"
+                data-notes="Para avaliar a viabilidade da operação, simulamos um cenário inicial de funcionamento da Urbanis. Como nosso modelo é baseado em consultoria especializada, não dependemos de centenas de clientes simultaneamente. Em uma operação enxuta, estimamos a execução de cinco projetos por mês. Sendo dois estudos UrbanScore Essencial, dois UrbanScore Estratégico e um UrbanScore Empresas. Nesse cenário, a receita mensal estimada seria de aproximadamente vinte e quatro mil reais. Conforme a metodologia amadurece e novos profissionais são incorporados à equipe, a capacidade operacional pode ser ampliada de forma escalável. E é justamente pensando nessa evolução que definimos os próximos passos da Urbanis.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                </div>
+
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">13. Operação Inicial</div>
+                    
+                    <div style="display: flex; justify-content: center; align-items: stretch; gap: 6vw; width: 90%; margin: 6vh auto 0;">
+                        <!-- Coluna 1: Capacidade (Alinhada à direita) -->
+                        <div class="reveal-fade" style="animation-delay: 0.5s; display: flex; flex-direction: column; align-items: flex-end; text-align: right; flex: 1;">
+                            <div style="font-size: clamp(8rem, 12vw, 12rem); font-weight: 700; background: linear-gradient(180deg, #FFFFFF 0%, #6E6E73 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; line-height: 0.85; text-shadow: 0 10px 30px rgba(255,255,255,0.05);">5</div>
+                            <div style="font-size: clamp(1.8rem, 3vw, 2.5rem); color: #E5E5EA; margin-top: 1vh; font-weight: 600; letter-spacing: -0.02em;">projetos</div>
+                            <div style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: #8E8E93; margin-top: 0.5vh; text-transform: uppercase; letter-spacing: 0.1em;">Capacidade inicial de operação</div>
+                            
+                            <div style="margin-top: 5vh; border-right: 2px solid rgba(238,0,0,0.5); padding-right: 1.5vw;">
+                                <p style="font-size: clamp(0.7rem, 0.9vw, 0.8rem); color: #6E6E73; margin-bottom: 1.5vh; text-transform: uppercase; letter-spacing: 0.1em;">Cenário Conservador</p>
+                                <p style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #E5E5EA; margin-bottom: 0.5rem; letter-spacing: 0.02em; font-weight: 500;">2 Estudos Essenciais</p>
+                                <p style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #A1A1A6; margin-bottom: 0.5rem; letter-spacing: 0.02em;">2 Estudos Estratégicos</p>
+                                <p style="font-size: clamp(1rem, 1.5vw, 1.3rem); color: #6E6E73; letter-spacing: 0.02em;">1 Estudo Empresas</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Divisor -->
+                        <div class="reveal-fade" style="animation-delay: 0.5s; width: 1px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0));"></div>
+
+                        <!-- Coluna 2: Receita (Alinhada à esquerda) -->
+                        <div class="reveal-fade" style="animation-delay: 0.5s; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex: 1;">
+                            <div style="font-size: clamp(4rem, 6vw, 6.5rem); font-weight: 700; background: linear-gradient(180deg, #FFFFFF 0%, #6E6E73 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; line-height: 0.85; margin-top: 1.5vh; text-shadow: 0 10px 30px rgba(255,255,255,0.05);">R$ 24.000</div>
+                            <div style="font-size: clamp(1.8rem, 3vw, 2.5rem); color: #E5E5EA; margin-top: 1vh; font-weight: 600; letter-spacing: -0.02em;">mensais</div>
+                            <div style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: #8E8E93; margin-top: 0.5vh; text-transform: uppercase; letter-spacing: 0.1em;">Receita estimada</div>
+                            
+                            <div class="reveal-fade" style="animation-delay: 1.5s; margin-top: 5vh; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5vw;">
+                                <p style="font-size: clamp(1.2rem, 1.8vw, 1.5rem); color: #A1A1A6; letter-spacing: -0.01em; font-weight: 300;">≈ R$ <span style="color: #E5E5EA; font-weight: 600;">288.000</span> / ano</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rodapé Simulação -->
+                    <div class="reveal-fade" style="animation-delay: 2.5s; margin-top: 8vh; width: 100%;">
+                        <p style="font-size: clamp(0.75rem, 1vw, 0.9rem); color: #4A4A4F; letter-spacing: 0.02em;">Simulação de operação inicial baseada na capacidade de atendimento da Urbanis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 14 — ROADMAP -->
+            <section class="scene scene-center" data-speaker="Cássio" data-role="Roadmap" data-duration="20"
+                data-notes="Como próximos passos, pretendemos evoluir o Urbanis em três frentes. A primeira é ampliar a quantidade de indicadores analisados, incorporando informações como renda média e valor do metro quadrado comercial. A segunda é automatizar a atualização das bases públicas. E por fim, expandir a metodologia para outras cidades. O MVP apresentado hoje valida o conceito. Os próximos passos são ampliar a cobertura territorial, enriquecer os dados e aumentar a capacidade de apoio à tomada de decisão.">
+                <div class="cinematic-bg">
+                    <div class="bg-overlay-heavy"></div>
+                </div>
+
+                <div class="scene-content text-center" style="width: 100%;">
+                    <div class="chapter-marker reveal-fade delay-1">14. Roadmap</div>
+                    
+                    <div class="minimal-timeline reveal-fade delay-2">
+                        <div class="timeline-item" style="animation-delay: 0.1s;">Hoje</div>
+                        <div class="timeline-arrow" style="animation-delay: 0.2s;">→</div>
+                        <div class="timeline-item" style="animation-delay: 0.3s;">Novos Indicadores</div>
+                        <div class="timeline-arrow" style="animation-delay: 0.4s;">→</div>
+                        <div class="timeline-item" style="animation-delay: 0.5s;">Atualização Automática</div>
+                        <div class="timeline-arrow" style="animation-delay: 0.6s;">→</div>
+                        <div class="timeline-item" style="animation-delay: 0.7s;">Novas Cidades</div>
+                    </div>
+                    <p class="subtitle mt-medium reveal-fade delay-3" style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #E5E5EA; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 5vh; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Evolução contínua da inteligência territorial.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 15 — ENCERRAMENTO -->
+            <section class="scene scene-center bg-pitch-black" data-speaker="Luiz" data-role="Encerramento"
+                data-duration="15"
+                data-notes="E com isso, queremos transformar informações públicas, que já estão disponíveis, em decisões de alto impacto para quem deseja expandir sua operação. Muito obrigado.">
+                <div class="cinematic-bg">
+                    <div class="radial-glow"></div>
+                </div>
+
+                <div class="scene-content text-center" style="z-index: 5; width: 100%;">
+                    <img src="./assets/urbanis-logo.png" alt="Urbanis" class="logo-hero reveal-text delay-1"
+                        style="width: clamp(200px, 20vw, 300px); margin: 0 auto; filter: drop-shadow(0 0 20px rgba(238,0,0,0.4));">
+                    <p class="subtitle mt-medium reveal-fade delay-2" style="font-size: clamp(1.2rem, 2vw, 1.8rem); color: #E5E5EA; letter-spacing: 0.02em; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">Transformando dados públicos em decisões mais inteligentes.</p>
+                </div>
+            </section>
+
         </div>
-        <div class="notes-content">Conteúdo da fala aparecerá aqui.</div>
-    </div>
+
+        <!-- Interface Superior (Ilha Dinâmica Simplificada) -->
+        <div id="dynamic-island" class="dynamic-island hidden">
+            <div class="island-content compact">
+                <div id="island-speaker-dot" class="speaker-dot-color"></div>
+                <span id="island-speaker-name" class="island-speaker">Urbanis</span>
+            </div>
+        </div>
+
+        <!-- Interface Inferior -->
+        <div class="hud hidden">
+            <button class="nav-btn prev" aria-label="Voltar">←</button>
+            <button class="nav-btn next" aria-label="Avançar">→</button>
+        </div>
+
+        <div id="notes-overlay" class="notes-overlay hidden">
+            <div class="notes-header">
+                <span class="notes-speaker">Roteiro</span>
+            </div>
+            <div class="notes-content">Conteúdo da fala aparecerá aqui.</div>
+        </div>
+
+        <!-- Restart Confirmation Modal -->
+        <div id="restart-modal" class="restart-modal hidden">
+            <div class="restart-content">
+                <h2 class="restart-title">Reiniciar apresentação?</h2>
+                <div class="restart-actions">
+                    <button id="btn-cancel-restart" class="btn-cancel">Cancelar</button>
+                    <button id="btn-confirm-restart" class="btn-confirm">Reiniciar</button>
+                </div>
+            </div>
+        </div>
 
     </div> <!-- End presentation-wrapper -->
 
     <script src="./script.js"></script>
 </body>
+
 </html>
