@@ -153,6 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 videos.forEach(v => {
                     v.currentTime = 0;
+                    if (v.hasAttribute('data-playback-rate')) {
+                        v.playbackRate = parseFloat(v.getAttribute('data-playback-rate'));
+                    } else {
+                        v.playbackRate = 1.0;
+                    }
                     v.play().catch(() => {});
                 });
             } else {
